@@ -3,7 +3,7 @@ import type { Task } from 'dhtmlx-gantt';
 export const ganttTasks: Task[] = [
   {
     id: 1,
-    text: 'Xmw Admin 开发周期',
+    text: 'Umi Admin 开发周期',
     type: 'project',
     progress: 0,
     open: true,

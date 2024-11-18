@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-09-08 11:09:03
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-07-05 11:12:02
+ * @LastEditTime: 2024-11-18 09:44:51
  */
 import { DefaultFooter } from '@ant-design/pro-components';
 import { Icon } from '@umijs/max';
@@ -31,19 +31,19 @@ const Footer: React.FC = () => {
               style={{ display: 'inline-block', fontSize: 16, verticalAlign: 'middle' }}
             />
           ),
-          href: 'https://github.com/baiwumm/Xmw-Admin/',
+          href: 'https://github.com/baiwumm/umi-admin/',
           blankTarget: true,
         },
         {
           key: 'Vue3 Admin',
           title: 'Vue3 Admin',
-          href: 'https://github.com/baiwumm/Vue3-Admin/',
+          href: 'https://github.com/baiwumm/vue3-admin/',
           blankTarget: true,
         },
         {
           key: 'Vue2 Admin',
           title: 'Vue2 Admin',
-          href: 'https://github.com/baiwumm/Vue2-Admin/',
+          href: 'https://github.com/baiwumm/vue2-admin/',
           blankTarget: true,
         },
       ]}
