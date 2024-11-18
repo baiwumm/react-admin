@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-09-08 11:09:03
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-11-18 09:44:51
+ * @LastEditTime: 2024-11-18 13:42:48
  */
 import { DefaultFooter } from '@ant-design/pro-components';
 import { Icon } from '@umijs/max';
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
               style={{ display: 'inline-block', fontSize: 16, verticalAlign: 'middle' }}
             />
           ),
-          href: 'https://github.com/baiwumm/umi-admin/',
+          href: 'https://github.com/baiwumm/react-admin/',
           blankTarget: true,
         },
         {

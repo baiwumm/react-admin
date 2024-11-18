@@ -4,7 +4,7 @@ const edgeType = 'smoothstep';
 export const initialNodes = [
   {
     id: '1',
-    data: { label: 'Umi Admin' },
+    data: { label: 'React Admin' },
     position,
   },
   {

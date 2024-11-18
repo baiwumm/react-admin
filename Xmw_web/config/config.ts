@@ -159,7 +159,7 @@ export default defineConfig({
     baidu: '8be1d11f8b2db2727b2b063e9158161d',
   },
   // TDK
-  title: 'Umi Admin',
+  title: 'React Admin',
   metas: [
     { name: 'keywords', content: 'React.js,Umi.js,Antd,Nest.js,后台模板,后台系统' },
     { name: 'description', content: '基于 React + Nest 全栈开发的后台系统' },
