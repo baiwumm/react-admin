@@ -3,25 +3,22 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-25 14:29:53
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:52:25
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2024-11-18 11:32:05
  */
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { InjectModel } from '@nestjs/sequelize';
-import * as moment from 'moment'; // 时间插件 moment
 import { Op } from 'sequelize';
 import type { WhereOptions } from 'sequelize/types';
 import { Sequelize } from 'sequelize-typescript';
 
-import RedisConfig from '@/config/redis'; // redis配置
 import { XmwInternational } from '@/models/xmw_international.model'; // xmw_international 实体
 import { XmwJobs } from '@/models/xmw_jobs.model'; // xmw_jobs 实体
 import { XmwMenu } from '@/models/xmw_menu.model'; // xmw_menu 实体
 import { XmwOrganization } from '@/models/xmw_organization.model'; // xmw_organization 实体
 import { XmwRole } from '@/models/xmw_role.model'; // xmw_role 实体
 import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import { RedisCacheService } from '@/modules/redis-cache/redis-cache.service'; // RedisCache Service
 import { initializeTree, responseMessage } from '@/utils';
 import type { Response, SessionTypes } from '@/utils/types';
 
@@ -38,7 +35,6 @@ export class AuthService {
     @InjectModel(XmwMenu)
     private readonly menuModel: typeof XmwMenu,
     private readonly jwtService: JwtService,
-    private readonly redisCacheService: RedisCacheService,
     private sequelize: Sequelize,
   ) { }
 
@@ -58,10 +54,6 @@ export class AuthService {
     );
     // 解构参数
     const { data: userInfo, code } = authResult;
-    // 获取上次登录时间
-    const lastLoginTime = await this.redisCacheService.cacheGet(
-      `${userInfo.user_id}-last-login`,
-    );
     // 状态码 code === 200,则登录成功
     switch (code) {
       case 200:
@@ -82,7 +74,7 @@ export class AuthService {
         // 将登录次数+1
         await this.userModel.increment({ login_num: 1 }, { where });
         // 将数据保存到session
-        session.currentUserInfo = await this.userModel.findOne({
+        const currentUserInfo = await this.userModel.findOne({
           attributes: {
             include: ['j.jobs_name', 'o.org_name', 'r.role_name'],
           },
@@ -107,21 +99,11 @@ export class AuthService {
           raw: true,
           where,
         });
-        // 将用户 token 保存到 redis
-        await this.redisCacheService.cacheSet(
-          `${userInfo.user_id}-${userInfo.user_name}`,
-          token,
-          RedisConfig().expiresin,
-        );
-        // 保存当前登录的时间
-        await this.redisCacheService.cacheSet(
-          `${userInfo.user_id}-last-login`,
-          moment().format('YYYY-MM-DD HH:mm:ss'),
-        );
+        session.currentUserInfo = currentUserInfo;
         return {
           data: {
             access_token: token,
-            login_last_time: JSON.parse(lastLoginTime),
+            login_last_time: userInfo.login_last_time,
           },
         };
       // 其它情况直接返回结果
@@ -181,9 +163,7 @@ export class AuthService {
   async logout(session: SessionTypes): Promise<responseResult> {
     const { currentUserInfo } = session;
     if (currentUserInfo) {
-      const { user_id, user_name } = currentUserInfo;
-      // 清空当前用户token
-      this.redisCacheService.cacheDel(`${user_id}-${user_name}`);
+      const { user_id } = currentUserInfo;
       // 清空数据库中 token
       await this.userModel.update(
         { token: '' },

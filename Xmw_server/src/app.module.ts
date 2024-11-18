@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-24 13:12:14
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-07-08 14:07:03
+ * @LastEditTime: 2024-11-18 09:54:58
  */
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
@@ -16,7 +16,6 @@ import { OrganizationModule } from '@/modules/administrative/organization/organi
 import { AuthModule } from '@/modules/auth/auth.module'; // 用户鉴权
 import { CommonModule } from '@/modules/common/common.module';
 import { FilesModule } from '@/modules/files/files.module'; // 文件上传
-import { RedisCacheModule } from '@/modules/redis-cache/redis-cache.module'; // redis 缓存
 import { InternationalModule } from '@/modules/system/international/international.module'; // 系统设置-国际化
 import { MenuManagementModule } from '@/modules/system/menu-management/menu-management.module'; // 系统设置-菜单管理
 import { OperationLogsModule } from '@/modules/system/operation-logs/operation-logs.module'; // 系统设置-操作日志
@@ -25,7 +24,6 @@ import { UserManagementModule } from '@/modules/system/user-management/user-mana
 
 import App_globalConfig from './config/configuration'; // 全局配置
 import DatabaseConfig from './config/database'; // 数据库配置
-import RedisConfig from './config/redis'; // redis配置
 
 @Module({
   imports: [
@@ -33,7 +31,7 @@ import RedisConfig from './config/redis'; // redis配置
     ConfigModule.forRoot({
       envFilePath: '.development.env', // 设置 .env 文件路径
       isGlobal: true,
-      load: [App_globalConfig, DatabaseConfig, RedisConfig],
+      load: [App_globalConfig, DatabaseConfig],
     }),
     SequelizeModule.forRootAsync({
       imports: [ConfigModule],
@@ -52,7 +50,6 @@ import RedisConfig from './config/redis'; // redis配置
     OperationLogsModule,
     FilesModule,
     AuthModule,
-    RedisCacheModule,
     AnnouncementModule,
     CommonModule,
   ],

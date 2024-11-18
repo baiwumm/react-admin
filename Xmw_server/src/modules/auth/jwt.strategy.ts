@@ -1,15 +1,14 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { Request } from 'express';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 
 import App_configuration from '@/config/configuration'; // 全局配置
 import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import { RedisCacheService } from '@/modules/redis-cache/redis-cache.service'; // RedisCache Service
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
-  constructor(private readonly redisCacheService: RedisCacheService) {
+  constructor() {
     super({
       // 提供从请求中提取 JWT 的方法。我们将使用在 API 请求的授权头中提供token的标准方法
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
@@ -30,16 +29,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
    * @author: 白雾茫茫丶
    */
   async validate(req: Request, payload: XmwUser): Promise<XmwUser> {
-    // 获取当前 token
-    const originToken = ExtractJwt.fromAuthHeaderAsBearerToken()(req);
-    // 获取 redis 存储的 token
-    const cacheToken = await this.redisCacheService.cacheGet(
-      `${payload.user_id}-${payload.user_name}`,
-    );
-    // token 已过期
-    if (!cacheToken) {
-      throw new UnauthorizedException('token令牌已过期，请重新登录！');
-    }
     // token 校验，用户二次登录
     // if (JSON.parse(cacheToken) !== originToken) {
     //   throw new UnauthorizedException('token令牌非法，请重新登录！');
