@@ -49,6 +49,7 @@ DATABASE_NAME =  root
 DATABASE_PWD =  123456
 # 数据库
 DATABASE_LIB =  umi-admin
+```
 
 2. 拉取项目代码
 ```poswrshell
