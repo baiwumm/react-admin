@@ -1,6 +1,6 @@
-<p align="center"><img width="100" src="./Xmw_web/public/logo.svg" alt="Xmw Admin"></p>
-<h1 align="center">Xmw Admin</h1>
-<p align="center">基于 React + Nest 全栈开发的后台系统</p>
+<p align="center"><img width="100" src="./Xmw_web/public/logo.svg" alt="Umi Admin"></p>
+<h1 align="center">Umi Admin</h1>
+<p align="center">基于 Umijs + Nest 全栈开发的后台系统</p>
 
 ## ☘️ 项目简介
 - 🍁 前端技术栈： [React](https://react.dev/)、[Ant Design](https://ant.design/)、[Umi](https://umijs.org/)、[TypeScript](https://github.com/microsoft/TypeScript)
@@ -12,9 +12,9 @@
 
 - 🍃 用户名：**admin**，密码：**abc123456**
 
-- [🪹 github 仓库地址](https://github.com/baiwumm/Xmw-Admin/)
+- [🪹 github 仓库地址](https://github.com/baiwumm/umi-admin/)
 
-- [🪺 码云仓库地址](https://gitee.com/baiwumm/Xmw-Admin/)
+- [🪺 码云仓库地址](https://gitee.com/baiwumm/umi-admin/)
 
 - [🍀 Swagger 接口文档](https://react.baiwumm.com/docs)
 
@@ -36,7 +36,7 @@
 - [Redis](https://github.com/redis/redis/)
 
 ## 🌴 项目运行
-1. 安装 [Mysql](https://www.mysql.com/) 和 [Redis](https://github.com/redis/redis/) 数据库，并导入 `/mysql/xmw_admin.sql` 文件，修改 `/Xmw_server/.development.env` 文件中的数据库配置，这一步要保证成功，不然后端服务起不来
+1. 安装 [Mysql](https://www.mysql.com/) 并导入 `/mysql/xmw_admin.sql` 文件，修改 `/Xmw_server/.development.env` 文件中的数据库配置，这一步要保证成功，不然后端服务起不来
 ```txt
 # ------- Mysql 配置相关 ---------------------
 # 数据库 host
@@ -48,23 +48,12 @@ DATABASE_NAME =  root
 # 密码
 DATABASE_PWD =  123456
 # 数据库
-DATABASE_LIB =  react_baiwumm_com
-
-# ------- Redis 配置相关 ---------------------
-# redis 端口号
-REDIS_PORT = 6379
-# redis hot 
-REDIS_HOST = 127.0.0.1
-# redis 存储库
-REDIS_DB = 0
-# redis 密码
-REDIS_PASSWORD = ''
-```
+DATABASE_LIB =  umi-admin
 
 2. 拉取项目代码
 ```poswrshell
-git clone https://github.com/baiwumm/Xmw-Admin.git
-cd Xmw-Admin
+git clone https://github.com/baiwumm/umi-admin.git
+cd umi-admin
 // 进入前端
 cd Xmw_web
 // 进入后端
@@ -159,8 +148,8 @@ pnpm build
 ## 🍄 总结
 1. 本项目没有经过严格的测试，有可能存在一定的 `Bug`。
 2. 本项目仅供学习交流使用，请勿用于商业用途。
-3. 欢迎提交 [Issues](https://github.com/baiwumm/Xmw-Admin/issues) 和 [PR](https://github.com/baiwumm/Xmw-Admin/pulls)，一起完善本项目。
+3. 欢迎提交 [Issues](https://github.com/baiwumm/umi-admin/issues) 和 [PR](https://github.com/baiwumm/umi-admin/pulls)，一起完善本项目。
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=baiwumm/Xmw-Admin&type=Date)](https://star-history.com/#baiwumm/Xmw-Admin&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=baiwumm/umi-admin&type=Date)](https://star-history.com/#baiwumm/umi-admin&Date)
