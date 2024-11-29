@@ -33,7 +33,6 @@
 - [Pnpm](https://github.com/pnpm/pnpm/) (推荐最新版本)
 - [Umi](https://umijs.org/)
 - [Mysql](https://www.mysql.com/) (Mysql版本为8.x)
-- [Redis](https://github.com/redis/redis/)
 
 ## 🌴 项目运行
 1. 安装 [Mysql](https://www.mysql.com/) 并导入 `/mysql/xmw_admin.sql` 文件，修改 `/Xmw_server/.development.env` 文件中的数据库配置，这一步要保证成功，不然后端服务起不来
