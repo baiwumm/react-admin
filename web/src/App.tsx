@@ -1,75 +1,35 @@
-import { RouterProvider } from '@sa/simple-router';
-import { useUpdateEffect } from 'ahooks';
-import type { WatermarkProps } from 'antd';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-import { info } from '@/constants/app';
-import { router } from '@/router';
-import { getLocale } from '@/store/slice/app';
-import { getDarkMode, getThemeSettings, themeColors } from '@/store/slice/theme';
-import { getAntdTheme, setupThemeVarsToHtml, toggleCssDarkMode } from '@/store/slice/theme/shared';
-import { localStg } from '@/utils/storage';
-
-import AppProvider from './components/stateful/AppProvider';
-import { antdLocales } from './locales/antd';
-
-const watermarkProps: WatermarkProps = {
-  font: {
-    fontSize: 16
-  },
-  height: 128,
-  offset: [12, 60],
-  rotate: -15,
-  width: 240,
-  zIndex: 9999
-};
-
-function useTheme() {
-  const themeSettings = useAppSelector(getThemeSettings);
-  const colors = useAppSelector(themeColors);
-
-  const darkMode = useAppSelector(getDarkMode);
-  const antdTheme = getAntdTheme(colors, darkMode, themeSettings.tokens);
-
-  useEffect(() => {
-    setupThemeVarsToHtml(colors, themeSettings.tokens, themeSettings.recommendColor);
-    localStg.set('themeColor', colors.primary);
-  }, [colors, themeSettings]);
-
-  useUpdateEffect(() => {
-    toggleCssDarkMode(darkMode);
-  }, [darkMode]);
-
-  console.info(`%c${info}`, `color: ${colors.primary}`);
-
-  return { antdTheme, themeSettings };
-}
-
-const App = () => {
-  const locale = useAppSelector(getLocale);
-
-  const { antdTheme, themeSettings } = useTheme();
+function App() {
+  const [count, setCount] = useState(0)
 
   return (
-    <AConfigProvider
-      button={{ classNames: { icon: 'align-1px  text-icon' } }}
-      card={{ styles: { body: { flex: 1, overflow: 'hidden', padding: '12px 16px ' } } }}
-      locale={antdLocales[locale]}
-      theme={antdTheme}
-    >
-      <AppProvider>
-        <AWatermark
-          className="h-full"
-          content={themeSettings.watermark.visible ? themeSettings.watermark?.text || 'Soybean' : ''}
-          {...watermarkProps}
-        >
-          <RouterProvider
-            fallback={<GlobalLoading />}
-            router={router}
-          />
-        </AWatermark>
-      </AppProvider>
-    </AConfigProvider>
-  );
-};
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
+}
 
-export default App;
+export default App

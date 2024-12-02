@@ -2,7 +2,7 @@
  * @Author: 白雾茫茫丶<baiwumm.com>
  * @Date: 2024-08-06 11:06:21
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-31 09:33:40
+ * @LastEditTime: 2024-12-02 09:06:47
  * @Description: OperationLogService - 操作日志
  */
 import { HttpService } from '@nestjs/axios';
@@ -64,13 +64,13 @@ export class OperationLogService {
     const realIp = getRealIp(this.request);
     // 登录接口需要单独处理
     const isLogin = originalUrl === '/auth/login';
-    if ((userInfo && method.toUpperCase() !== 'GET') || isLogin) {
-      if (isLogin) {
-        // 查询数据库中对应的用户
-        userInfo = await this.prisma.user.findUnique({
-          where: { userName: body.userName },
-        });
-      }
+    if (isLogin) {
+      // 查询数据库中对应的用户
+      userInfo = await this.prisma.user.findUnique({
+        where: { userName: body.userName },
+      });
+    }
+    if (userInfo && (method.toUpperCase() !== 'GET' || isLogin)) {
       const parser = new UAParser(userAgent);
       // 根据 IP 获取地理信息
       let location = {};
