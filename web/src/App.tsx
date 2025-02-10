@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { RouterProvider } from '@sa/simple-router';
+import type { WatermarkProps } from 'antd';
 
-function App() {
-  const [count, setCount] = useState(0)
+import { router } from '@/router';
+import { getThemeSettings } from '@/store/slice/theme';
+
+import AppProvider from './components/stateful/AppProvider';
+import { AntdConfig, ThemeProvider } from './features';
+
+const watermarkProps: WatermarkProps = {
+  font: {
+    fontSize: 16
+  },
+  height: 128,
+  offset: [12, 60],
+  rotate: -15,
+  width: 240,
+  zIndex: 9999
+};
+
+const App = () => {
+  const themeSettings = useAppSelector(getThemeSettings);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <ThemeProvider>
+      <AntdConfig>
+        <AppProvider>
+          <AWatermark
+            className="h-full"
+            content={themeSettings.watermark.visible ? themeSettings.watermark?.text || 'Soybean' : ''}
+            {...watermarkProps}
+          >
+            <RouterProvider
+              fallback={<GlobalLoading />}
+              router={router}
+            />
+          </AWatermark>
+        </AppProvider>
+      </AntdConfig>
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;
