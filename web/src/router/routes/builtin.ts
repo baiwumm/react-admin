@@ -42,10 +42,10 @@ const LOG_OUT_ROUTE: CustomRoute = {
 
     if (needRedirect) {
       const redirectFullPath = formData.get('redirectFullPath');
-      return redirect(`/login/pwd-login?redirect=${redirectFullPath}`);
+      return redirect(`/login?redirect=${redirectFullPath}`);
     }
 
-    return redirect('/login/pwd-login');
+    return redirect('/login');
   },
   meta: {
     hideInMenu: true,

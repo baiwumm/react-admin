@@ -12,7 +12,7 @@ import type {
 import { $t } from '@/locales';
 import { getRouteName, getRoutePath } from '@/router/elegant/transform';
 import { store } from '@/store';
-import { isStaticSuper, selectUserInfo } from '@/store/slice/auth';
+import { initLocales, isStaticSuper, selectUserInfo } from '@/store/slice/auth';
 import { getRouteHome, initAuthRoute, initConstantRoute } from '@/store/slice/route';
 import { localStg } from '@/utils/storage';
 
@@ -20,7 +20,7 @@ export const init: Init = async currentFullPath => {
   await store.dispatch(initConstantRoute());
 
   const isLogin = Boolean(localStg.get('token'));
-
+  await store.dispatch(initLocales());
   if (!isLogin) {
     if (currentFullPath.includes('login')) {
       return currentFullPath;

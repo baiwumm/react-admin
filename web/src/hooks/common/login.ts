@@ -15,11 +15,10 @@ export function useLogin() {
 
   const dispatch = useAppDispatch();
 
-  async function toLogin(params: { password: string; userName: string }, redirect = true) {
+  async function toLogin(params: Api.Auth.LoginParams, redirect = true) {
     startLoading();
     await dispatch(login(params));
     const userName = dispatch(getUerName());
-
     if (userName) {
       await dispatch(initAuthRoute());
 

@@ -72,14 +72,6 @@ declare namespace Env {
     readonly VITE_SERVICE_BASE_URL: string;
 
     /**
-     * token expired codes of backend service
-     *
-     * when the code is received, it will refresh the token and resend the request
-     *
-     * use "," to separate multiple codes
-     */
-    readonly VITE_SERVICE_EXPIRED_TOKEN_CODES: string;
-    /**
      * logout codes of backend service
      *
      * when the code is received, the user will be logged out and redirected to login page

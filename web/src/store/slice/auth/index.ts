@@ -1,6 +1,8 @@
 import { createSelector } from '@reduxjs/toolkit';
+import i18n from 'i18next';
+import { forIn } from 'lodash-es';
 
-import { fetchGetUserInfo, fetchLogin } from '@/service/api';
+import { fetchGetUserInfo, fetchLogin, getLocales } from '@/service/api';
 import { localStg } from '@/utils/storage';
 
 import type { AppThunk } from '../..';
@@ -20,12 +22,11 @@ export const authSlice = createAppSlice({
   name: 'auth',
   reducers: create => ({
     login: create.asyncThunk(
-      async ({ password, userName }: { password: string; userName: string }) => {
-        const { data: loginToken, error } = await fetchLogin(userName, password);
+      async (params: Api.Auth.LoginParams) => {
+        const { data: loginToken, error } = await fetchLogin(params);
         // 1. stored in the localStorage, the later requests need it in headers
         if (!error) {
           localStg.set('token', loginToken.token);
-          localStg.set('refreshToken', loginToken.refreshToken);
 
           const { data: info, error: userInfoError } = await fetchGetUserInfo();
 
@@ -90,3 +91,13 @@ export const resetStore = (): AppThunk => dispatch => {
 
 /** Is login */
 export const getIsLogin = createSelector([selectToken], token => Boolean(token));
+
+/** @description: 初始化多语言数据 */
+export const initLocales = () => async () => {
+  const { data, error } = await getLocales();
+  if (!error) {
+    forIn(data, (value, key) => {
+      i18n.addResourceBundle(key, 'translation', value);
+    });
+  }
+};

@@ -1,48 +1,43 @@
 import { request } from '../request';
 
 /**
- * Login
- *
- * @param userName User name
- * @param password Password
+ * @param {Api.Auth.LoginParams} params
+ * @description: 用户登录
  */
-export function fetchLogin(userName: string, password: string) {
-  return request<Api.Auth.LoginToken>({
-    data: {
-      password,
-      userName
-    },
+export const fetchLogin = (params: Api.Auth.LoginParams) =>
+  request<Api.Auth.LoginToken>({
+    data: params,
     method: 'post',
     url: '/auth/login'
   });
-}
 
-/** Get user info */
-export function fetchGetUserInfo() {
-  return request<Api.Auth.UserInfo>({ url: '/auth/getUserInfo' });
-}
+/** @description: 获取用户信息 */
+export const fetchGetUserInfo = () => request<Api.Auth.UserInfo>({ url: '/auth/getUserInfo' });
 
-/**
- * Refresh token
- *
- * @param refreshToken Refresh token
- */
-export function fetchRefreshToken(refreshToken: string) {
-  return request<Api.Auth.LoginToken>({
-    data: {
-      refreshToken
+/** @description: 获取图形验证码 */
+export const getCaptcha = () => request({ url: '/auth/captcha' });
+
+/** @description: 用户注销登录 */
+export const fetchLogout = () =>
+  request({
+    method: 'post',
+    url: '/auth/logout'
+  });
+
+/** @description: 国际化层级数据 */
+export const getLocales = () => request({ url: '/auth/getLocales' });
+
+/** @description: 获取掘金文章 */
+export const getJuejinList = (params: Api.Auth.JuejinParams) =>
+  request({ data: params, method: 'post', url: '/auth/juejin' });
+
+/** @description: 上传图片 */
+export const uploadSingleFile = (params: FormData) =>
+  request({
+    data: params,
+    headers: {
+      'Content-Type': 'multipart/form-data'
     },
     method: 'post',
-    url: '/auth/refreshToken'
+    url: '/upload/single-file'
   });
-}
-
-/**
- * return custom backend error
- *
- * @param code error code
- * @param msg error message
- */
-export function fetchCustomBackendError(code: string, msg: string) {
-  return request({ params: { code, msg }, url: '/auth/error' });
-}

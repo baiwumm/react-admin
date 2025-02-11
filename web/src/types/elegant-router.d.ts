@@ -36,24 +36,9 @@ declare module "@elegant-router/types" {
     "404": "/404";
     "500": "/500";
     "about": "/about";
-    "function": "/function";
-    "function_event-bus": "event-bus";
-    "function_hide-child": "hide-child";
-    "function_hide-child_one": "one";
-    "function_hide-child_three": "three";
-    "function_hide-child_two": "two";
-    "function_multi-tab": "multi-tab";
-    "function_request": "request";
-    "function_super-page": "super-page";
-    "function_tab": "tab";
-    "function_toggle-auth": "toggle-auth";
     "home": "/home";
     "iframe-page": "/iframe-page/:url";
     "login": "/login";
-    "login_code-login": "code-login";
-    "login_pwd-login": "pwd-login";
-    "login_register": "register";
-    "login_reset-pwd": "reset-pwd";
     "manage": "/manage";
     "manage_menu": "menu";
     "manage_role": "role";
@@ -114,7 +99,6 @@ declare module "@elegant-router/types" {
     | "404"
     | "500"
     | "about"
-    | "function"
     | "home"
     | "iframe-page"
     | "login"
@@ -145,21 +129,8 @@ declare module "@elegant-router/types" {
     | "500"
     | "iframe-page"
     | "about"
-    | "function_event-bus"
-    | "function_hide-child_one"
-    | "function_hide-child_three"
-    | "function_hide-child_two"
-    | "function_multi-tab"
-    | "function_request"
-    | "function_super-page"
-    | "function_tab"
-    | "function_toggle-auth"
     | "home"
-    | "login_code-login"
     | "login"
-    | "login_pwd-login"
-    | "login_register"
-    | "login_reset-pwd"
     | "manage_menu"
     | "manage_role"
     | "manage_user-detail"

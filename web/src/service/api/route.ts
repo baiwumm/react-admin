@@ -1,20 +1,16 @@
 import { request } from '../request';
 
-/** get constant routes */
-export function fetchGetConstantRoutes() {
-  return request<Api.Route.MenuRoute[]>({ url: '/route/getConstantRoutes' });
-}
+/** @description: 获取常量路由 */
+export const fetchGetConstantRoutes = () => request<Api.Route.MenuRoute[]>({ url: '/auth/getConstantRoutes' });
 
-/** get user routes */
-export function fetchGetUserRoutes() {
-  return request<Api.Route.UserRoute>({ url: '/route/getUserRoutes' });
-}
+/** @description: 获取用户路由 */
+export const fetchGetUserRoutes = () => request<Api.Route.UserRoute>({ url: '/auth/getUserRoutes' });
 
 /**
- * whether the route is exist
- *
- * @param routeName route name
+ * @param {string} name
+ * @description: 判断路由是否存在
  */
-export function fetchIsRouteExist(routeName: string) {
-  return request<boolean>({ params: { routeName }, url: '/route/isRouteExist' });
-}
+export const fetchIsRouteExist = (name: string) => request<boolean>({ url: '/auth/isRouteExist', params: { name } });
+
+/** @description: 获取角色权限路由 */
+export const fetchRoleRoutes = () => request<Api.SystemManage.MenuManage[]>({ url: '/auth/getRoleRoutes' });

@@ -51,134 +51,6 @@ export const generatedRoutes: GeneratedRoute[] = [
     }
   },
   {
-    name: 'function',
-    path: '/function',
-    component: 'layout.base',
-    meta: {
-      title: 'function',
-      i18nKey: 'route.function',
-      icon: 'icon-park-outline:all-application',
-      order: 6
-    },
-    children: [
-      {
-        name: 'function_event-bus',
-        path: 'event-bus',
-        component: 'view.function_event-bus',
-        meta: {
-          i18nKey: 'route.function_event-bus',
-          title: 'function_event-bus',
-          icon: 'ant-design:send-outlined'
-        }
-      },
-      {
-        name: 'function_hide-child',
-        path: 'hide-child',
-        meta: {
-          title: 'function_hide-child',
-          i18nKey: 'route.function_hide-child',
-          icon: 'material-symbols:filter-list-off',
-          order: 2
-        },
-        children: [
-          {
-            name: 'function_hide-child_one',
-            path: 'one',
-            component: 'view.function_hide-child_one',
-            meta: {
-              title: 'function_hide-child_one',
-              i18nKey: 'route.function_hide-child_one',
-              icon: 'material-symbols:filter-list-off',
-              hideInMenu: true,
-              activeMenu: 'function_hide-child'
-            }
-          },
-          {
-            name: 'function_hide-child_three',
-            path: 'three',
-            component: 'view.function_hide-child_three',
-            meta: {
-              title: 'function_hide-child_three',
-              i18nKey: 'route.function_hide-child_three',
-              hideInMenu: true,
-              activeMenu: 'function_hide-child'
-            }
-          },
-          {
-            name: 'function_hide-child_two',
-            path: 'two',
-            component: 'view.function_hide-child_two',
-            meta: {
-              title: 'function_hide-child_two',
-              i18nKey: 'route.function_hide-child_two',
-              hideInMenu: true,
-              activeMenu: 'function_hide-child'
-            }
-          }
-        ]
-      },
-      {
-        name: 'function_multi-tab',
-        path: 'multi-tab',
-        component: 'view.function_multi-tab',
-        meta: {
-          title: 'function_multi-tab',
-          i18nKey: 'route.function_multi-tab',
-          icon: 'ic:round-tab',
-          multiTab: true,
-          hideInMenu: true,
-          activeMenu: 'function_tab'
-        }
-      },
-      {
-        name: 'function_request',
-        path: 'request',
-        component: 'view.function_request',
-        meta: {
-          title: 'function_request',
-          i18nKey: 'route.function_request',
-          icon: 'carbon:network-overlay',
-          order: 3
-        }
-      },
-      {
-        name: 'function_super-page',
-        path: 'super-page',
-        component: 'view.function_super-page',
-        meta: {
-          title: 'function_super-page',
-          i18nKey: 'route.function_super-page',
-          icon: 'ic:round-supervisor-account',
-          order: 5,
-          roles: ['R_SUPER']
-        }
-      },
-      {
-        name: 'function_tab',
-        path: 'tab',
-        component: 'view.function_tab',
-        meta: {
-          title: 'function_tab',
-          i18nKey: 'route.function_tab',
-          icon: 'ic:round-tab',
-          order: 1,
-          keepAlive: true
-        }
-      },
-      {
-        name: 'function_toggle-auth',
-        path: 'toggle-auth',
-        component: 'view.function_toggle-auth',
-        meta: {
-          title: 'function_toggle-auth',
-          i18nKey: 'route.function_toggle-auth',
-          icon: 'ic:round-construction',
-          order: 4
-        }
-      }
-    ]
-  },
-  {
     name: 'home',
     path: '/home',
     component: 'layout.base$view.home',
@@ -204,52 +76,13 @@ export const generatedRoutes: GeneratedRoute[] = [
     name: 'login',
     path: '/login',
     component: 'layout.blank',
-    redirect: 'pwd-login',
     layout: 'blank',
     meta: {
       title: 'login',
       i18nKey: 'route.login',
       constant: true,
       hideInMenu: true
-    },
-    children: [
-      {
-        name: 'login_code-login',
-        path: 'code-login',
-        component: 'view.login_code-login',
-        meta: {
-          title: 'login_code-login',
-          i18nKey: 'route.login_code-login'
-        }
-      },
-      {
-        name: 'login_pwd-login',
-        path: 'pwd-login',
-        component: 'view.login_pwd-login',
-        meta: {
-          title: 'login_pwd-login',
-          i18nKey: 'route.login_pwd-login'
-        }
-      },
-      {
-        name: 'login_register',
-        path: 'register',
-        component: 'view.login_register',
-        meta: {
-          title: 'login_register',
-          i18nKey: 'route.login_register'
-        }
-      },
-      {
-        name: 'login_reset-pwd',
-        path: 'reset-pwd',
-        component: 'view.login_reset-pwd',
-        meta: {
-          title: 'login_reset-pwd',
-          i18nKey: 'route.login_reset-pwd'
-        }
-      }
-    ]
+    }
   },
   {
     name: 'manage',

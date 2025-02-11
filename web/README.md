@@ -1,7 +1,6 @@
 <div align="center">
  <img src="./public/favicon.svg" width="160" />
  <h1>React SoybeanAdmin</h1>
-  <span><a href="./README.en-US.md">English</a> | 中文</span>
 </div>
 
 ---
