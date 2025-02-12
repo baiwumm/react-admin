@@ -36,20 +36,36 @@ declare module "@elegant-router/types" {
     "404": "/404";
     "500": "/500";
     "about": "/about";
+    "administrative": "/administrative";
+    "administrative_framework": "framework";
+    "administrative_message": "message";
+    "administrative_message-detail": "message-detail";
+    "administrative_organization": "organization";
+    "administrative_post-manage": "post-manage";
+    "features": "/features";
+    "features_captcha": "captcha";
+    "features_colorthief": "colorthief";
+    "features_draggable": "draggable";
+    "features_eye-dropper": "eye-dropper";
+    "features_flow": "flow";
+    "features_gantt": "gantt";
+    "features_lazyload": "lazyload";
+    "features_pickr": "pickr";
+    "features_print": "print";
+    "features_swiper": "swiper";
+    "features_viewer": "viewer";
+    "features_vue-directive": "vue-directive";
+    "features_vue-office": "vue-office";
+    "features_waterfall": "waterfall";
     "home": "/home";
     "iframe-page": "/iframe-page/:url";
     "login": "/login";
-    "manage": "/manage";
-    "manage_menu": "menu";
-    "manage_role": "role";
-    "manage_user": "user";
-    "manage_user-detail": "user-detail/:id";
-    "multi-menu": "/multi-menu";
-    "multi-menu_first": "first";
-    "multi-menu_first_child": "child";
-    "multi-menu_second": "second";
-    "multi-menu_second_child": "child";
-    "multi-menu_second_child_home": "home";
+    "system-manage": "/system-manage";
+    "system-manage_internalization": "internalization";
+    "system-manage_menu-manage": "menu-manage";
+    "system-manage_operation-log": "operation-log";
+    "system-manage_role-manage": "role-manage";
+    "system-manage_user-manage": "user-manage";
     "user-center": "/user-center";
   };
 
@@ -99,11 +115,12 @@ declare module "@elegant-router/types" {
     | "404"
     | "500"
     | "about"
+    | "administrative"
+    | "features"
     | "home"
     | "iframe-page"
     | "login"
-    | "manage"
-    | "multi-menu"
+    | "system-manage"
     | "user-center"
   >;
 
@@ -129,14 +146,32 @@ declare module "@elegant-router/types" {
     | "500"
     | "iframe-page"
     | "about"
+    | "administrative_framework"
+    | "administrative_message-detail"
+    | "administrative_message"
+    | "administrative_organization"
+    | "administrative_post-manage"
+    | "features_captcha"
+    | "features_colorthief"
+    | "features_draggable"
+    | "features_eye-dropper"
+    | "features_flow"
+    | "features_gantt"
+    | "features_lazyload"
+    | "features_pickr"
+    | "features_print"
+    | "features_swiper"
+    | "features_viewer"
+    | "features_vue-directive"
+    | "features_vue-office"
+    | "features_waterfall"
     | "home"
     | "login"
-    | "manage_menu"
-    | "manage_role"
-    | "manage_user-detail"
-    | "manage_user"
-    | "multi-menu_first_child"
-    | "multi-menu_second_child_home"
+    | "system-manage_internalization"
+    | "system-manage_menu-manage"
+    | "system-manage_operation-log"
+    | "system-manage_role-manage"
+    | "system-manage_user-manage"
     | "user-center"
   >;
 

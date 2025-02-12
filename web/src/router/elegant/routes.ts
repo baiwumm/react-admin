@@ -51,6 +51,199 @@ export const generatedRoutes: GeneratedRoute[] = [
     }
   },
   {
+    name: 'administrative',
+    path: '/administrative',
+    component: 'layout.base',
+    meta: {
+      i18nKey: 'route.administrative',
+      title: 'administrative'
+    },
+    children: [
+      {
+        name: 'administrative_framework',
+        path: 'framework',
+        component: 'view.administrative_framework',
+        meta: {
+          i18nKey: 'route.administrative_framework',
+          title: 'administrative_framework'
+        }
+      },
+      {
+        name: 'administrative_message',
+        path: 'message',
+        component: 'view.administrative_message',
+        meta: {
+          i18nKey: 'route.administrative_message',
+          title: 'administrative_message'
+        }
+      },
+      {
+        name: 'administrative_message-detail',
+        path: 'message-detail',
+        component: 'view.administrative_message-detail',
+        meta: {
+          i18nKey: 'route.administrative_message-detail',
+          title: 'administrative_message-detail'
+        }
+      },
+      {
+        name: 'administrative_organization',
+        path: 'organization',
+        component: 'view.administrative_organization',
+        meta: {
+          i18nKey: 'route.administrative_organization',
+          title: 'administrative_organization'
+        }
+      },
+      {
+        name: 'administrative_post-manage',
+        path: 'post-manage',
+        component: 'view.administrative_post-manage',
+        meta: {
+          i18nKey: 'route.administrative_post-manage',
+          title: 'administrative_post-manage'
+        }
+      }
+    ]
+  },
+  {
+    name: 'features',
+    path: '/features',
+    component: 'layout.base',
+    meta: {
+      i18nKey: 'route.features',
+      title: 'features'
+    },
+    children: [
+      {
+        name: 'features_captcha',
+        path: 'captcha',
+        component: 'view.features_captcha',
+        meta: {
+          i18nKey: 'route.features_captcha',
+          title: 'features_captcha'
+        }
+      },
+      {
+        name: 'features_colorthief',
+        path: 'colorthief',
+        component: 'view.features_colorthief',
+        meta: {
+          i18nKey: 'route.features_colorthief',
+          title: 'features_colorthief'
+        }
+      },
+      {
+        name: 'features_draggable',
+        path: 'draggable',
+        component: 'view.features_draggable',
+        meta: {
+          i18nKey: 'route.features_draggable',
+          title: 'features_draggable'
+        }
+      },
+      {
+        name: 'features_eye-dropper',
+        path: 'eye-dropper',
+        component: 'view.features_eye-dropper',
+        meta: {
+          i18nKey: 'route.features_eye-dropper',
+          title: 'features_eye-dropper'
+        }
+      },
+      {
+        name: 'features_flow',
+        path: 'flow',
+        component: 'view.features_flow',
+        meta: {
+          i18nKey: 'route.features_flow',
+          title: 'features_flow'
+        }
+      },
+      {
+        name: 'features_gantt',
+        path: 'gantt',
+        component: 'view.features_gantt',
+        meta: {
+          i18nKey: 'route.features_gantt',
+          title: 'features_gantt'
+        }
+      },
+      {
+        name: 'features_lazyload',
+        path: 'lazyload',
+        component: 'view.features_lazyload',
+        meta: {
+          i18nKey: 'route.features_lazyload',
+          title: 'features_lazyload'
+        }
+      },
+      {
+        name: 'features_pickr',
+        path: 'pickr',
+        component: 'view.features_pickr',
+        meta: {
+          i18nKey: 'route.features_pickr',
+          title: 'features_pickr'
+        }
+      },
+      {
+        name: 'features_print',
+        path: 'print',
+        component: 'view.features_print',
+        meta: {
+          i18nKey: 'route.features_print',
+          title: 'features_print'
+        }
+      },
+      {
+        name: 'features_swiper',
+        path: 'swiper',
+        component: 'view.features_swiper',
+        meta: {
+          i18nKey: 'route.features_swiper',
+          title: 'features_swiper'
+        }
+      },
+      {
+        name: 'features_viewer',
+        path: 'viewer',
+        component: 'view.features_viewer',
+        meta: {
+          i18nKey: 'route.features_viewer',
+          title: 'features_viewer'
+        }
+      },
+      {
+        name: 'features_vue-directive',
+        path: 'vue-directive',
+        component: 'view.features_vue-directive',
+        meta: {
+          i18nKey: 'route.features_vue-directive',
+          title: 'features_vue-directive'
+        }
+      },
+      {
+        name: 'features_vue-office',
+        path: 'vue-office',
+        component: 'view.features_vue-office',
+        meta: {
+          i18nKey: 'route.features_vue-office',
+          title: 'features_vue-office'
+        }
+      },
+      {
+        name: 'features_waterfall',
+        path: 'waterfall',
+        component: 'view.features_waterfall',
+        meta: {
+          i18nKey: 'route.features_waterfall',
+          title: 'features_waterfall'
+        }
+      }
+    ]
+  },
+  {
     name: 'home',
     path: '/home',
     component: 'layout.base$view.home',
@@ -75,7 +268,7 @@ export const generatedRoutes: GeneratedRoute[] = [
   {
     name: 'login',
     path: '/login',
-    component: 'layout.blank',
+    component: 'layout.blank$view.login',
     layout: 'blank',
     meta: {
       title: 'login',
@@ -85,127 +278,58 @@ export const generatedRoutes: GeneratedRoute[] = [
     }
   },
   {
-    name: 'manage',
-    path: '/manage',
+    name: 'system-manage',
+    path: '/system-manage',
     component: 'layout.base',
     meta: {
-      title: 'manage',
-      i18nKey: 'route.manage',
-      icon: 'carbon:cloud-service-management',
-      order: 9,
-      roles: ['R_ADMIN']
+      i18nKey: 'route.system-manage',
+      title: 'system-manage'
     },
     children: [
       {
-        name: 'manage_menu',
-        path: 'menu',
-        component: 'view.manage_menu',
+        name: 'system-manage_internalization',
+        path: 'internalization',
+        component: 'view.system-manage_internalization',
         meta: {
-          i18nKey: 'route.manage_menu',
-          icon: 'material-symbols:route',
-          keepAlive: true,
-          order: 3,
-          roles: ['R_ADMIN'],
-          title: 'manage_menu'
+          i18nKey: 'route.system-manage_internalization',
+          title: 'system-manage_internalization'
         }
       },
       {
-        name: 'manage_role',
-        path: 'role',
-        component: 'view.manage_role',
+        name: 'system-manage_menu-manage',
+        path: 'menu-manage',
+        component: 'view.system-manage_menu-manage',
         meta: {
-          i18nKey: 'route.manage_role',
-          icon: 'carbon:user-role',
-          order: 2,
-          roles: ['R_SUPER'],
-          title: 'manage_role'
+          i18nKey: 'route.system-manage_menu-manage',
+          title: 'system-manage_menu-manage'
         }
       },
       {
-        name: 'manage_user',
-        path: 'user',
-        component: 'view.manage_user',
+        name: 'system-manage_operation-log',
+        path: 'operation-log',
+        component: 'view.system-manage_operation-log',
         meta: {
-          i18nKey: 'route.manage_user',
-          icon: 'ic:round-manage-accounts',
-          order: 1,
-          roles: ['R_ADMIN'],
-          title: 'manage_user'
+          i18nKey: 'route.system-manage_operation-log',
+          title: 'system-manage_operation-log'
         }
       },
       {
-        name: 'manage_user-detail',
-        path: 'user-detail/:id',
-        component: 'view.manage_user-detail',
+        name: 'system-manage_role-manage',
+        path: 'role-manage',
+        component: 'view.system-manage_role-manage',
         meta: {
-          title: 'manage_user-detail',
-          i18nKey: 'route.manage_user-detail',
-          hideInMenu: true,
-          roles: ['R_ADMIN'],
-          activeMenu: 'manage_user'
+          i18nKey: 'route.system-manage_role-manage',
+          title: 'system-manage_role-manage'
         }
-      }
-    ]
-  },
-  {
-    name: 'multi-menu',
-    path: '/multi-menu',
-    component: 'layout.base',
-    meta: {
-      title: 'multi-menu',
-      i18nKey: 'route.multi-menu',
-      order: 8
-    },
-    children: [
-      {
-        name: 'multi-menu_first',
-        path: 'first',
-        meta: {
-          title: 'multi-menu_first',
-          i18nKey: 'route.multi-menu_first',
-          order: 1
-        },
-        children: [
-          {
-            name: 'multi-menu_first_child',
-            path: 'child',
-            component: 'view.multi-menu_first_child',
-            meta: {
-              title: 'multi-menu_first_child',
-              i18nKey: 'route.multi-menu_first_child'
-            }
-          }
-        ]
       },
       {
-        name: 'multi-menu_second',
-        path: 'second',
+        name: 'system-manage_user-manage',
+        path: 'user-manage',
+        component: 'view.system-manage_user-manage',
         meta: {
-          title: 'multi-menu_second',
-          i18nKey: 'route.multi-menu_second',
-          order: 2
-        },
-        children: [
-          {
-            name: 'multi-menu_second_child',
-            path: 'child',
-            meta: {
-              title: 'multi-menu_second_child',
-              i18nKey: 'route.multi-menu_second_child'
-            },
-            children: [
-              {
-                name: 'multi-menu_second_child_home',
-                path: 'home',
-                component: 'view.multi-menu_second_child_home',
-                meta: {
-                  title: 'multi-menu_second_child_home',
-                  i18nKey: 'route.multi-menu_second_child_home'
-                }
-              }
-            ]
-          }
-        ]
+          i18nKey: 'route.system-manage_user-manage',
+          title: 'system-manage_user-manage'
+        }
       }
     ]
   },
