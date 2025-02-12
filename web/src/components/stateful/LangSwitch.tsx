@@ -15,7 +15,6 @@ const LangSwitch: FC<Props> = memo(({ className, showTooltip = true }) => {
   const dispatch = useAppDispatch();
   const locale = useAppSelector(getLocale);
   const localeOptions = useAppSelector(getLocaleOptions);
-
   const tooltipContent = showTooltip ? t('icon.lang') : '';
 
   function changeLocales({ key }: { key: string }) {

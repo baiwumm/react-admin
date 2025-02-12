@@ -28,11 +28,19 @@ const initialState: InitialStateType = {
   localeOptions: [
     {
       key: 'zh-CN',
-      label: '中文'
+      label: '🇨🇳 中文'
     },
     {
       key: 'en-US',
-      label: 'English'
+      label: '🇺🇸 English'
+    },
+    {
+      key: 'ja-JP',
+      label: '🇯🇵 日本語'
+    },
+    {
+      key: 'zh-TW',
+      label: '🇭🇰 繁體中文'
     }
   ],
   mixSiderFixed: false,
@@ -128,15 +136,15 @@ export const {
  */
 export const reloadPage =
   (duration = 300): AppThunk =>
-  async (dispatch, getState) => {
-    dispatch(setReloadFlag(false));
+    async (dispatch, getState) => {
+      dispatch(setReloadFlag(false));
 
-    const themeSettings = getThemeSettings(getState());
-    const d = themeSettings.page.animate ? duration : 40;
+      const themeSettings = getThemeSettings(getState());
+      const d = themeSettings.page.animate ? duration : 40;
 
-    await new Promise(resolve => {
-      setTimeout(resolve, d);
-    });
+      await new Promise(resolve => {
+        setTimeout(resolve, d);
+      });
 
-    dispatch(setReloadFlag(true));
-  };
+      dispatch(setReloadFlag(true));
+    };
