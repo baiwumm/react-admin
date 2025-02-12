@@ -1,5 +1,12 @@
+/*
+ * @Author: 白雾茫茫丶<baiwumm.com>
+ * @Date: 2025-02-10 15:57:51
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-02-12 13:47:40
+ * @Description: 顶部头像
+ */
 import { useRoute } from '@sa/simple-router';
-import { Button, Dropdown } from 'antd';
+import { Avatar, Button, Dropdown } from 'antd';
 import type { MenuProps } from 'antd';
 import { useSubmit } from 'react-router-dom';
 
@@ -45,7 +52,7 @@ const UserAvatar = memo(() => {
         <div className="flex-center gap-8px">
           <SvgIcon
             className="text-icon"
-            icon="ph:user-circle"
+            icon="ri:id-card-line"
           />
           {t('common.userCenter')}
         </div>
@@ -75,11 +82,8 @@ const UserAvatar = memo(() => {
     >
       <div>
         <ButtonIcon className="px-12px">
-          <SvgIcon
-            className="text-icon-large"
-            icon="ph:user-circle"
-          />
-          <span className="text-16px font-medium">{userInfo.userName}</span>
+          <Avatar src={userInfo.avatar} />
+          <span className="text-16px font-medium">{userInfo.cnName}</span>
         </ButtonIcon>
       </div>
     </Dropdown>
