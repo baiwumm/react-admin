@@ -1,8 +1,10 @@
 import { useBoolean, useHookTable } from '@sa/hooks';
 import type { TablePaginationConfig, TableProps } from 'antd';
 import { Form } from 'antd';
+import type { AxiosError } from 'axios';
 
 import { getIsMobile } from '@/store/slice/app';
+import { findNodeById } from '@/utils';
 
 type TableData = AntDesign.TableData;
 type GetTableData<A extends AntDesign.TableApiFn> = AntDesign.GetTableData<A>;
@@ -126,6 +128,7 @@ export function useTable<A extends AntDesign.TableApiFn>(
     columnChecks,
     data,
     empty,
+    resetSearchParams,
     run,
     searchParams,
     searchProps: {
@@ -140,14 +143,18 @@ export function useTable<A extends AntDesign.TableApiFn>(
       loading,
       pagination,
       rowKey
-    }
+    },
+    updateSearchParams
   };
 }
 
 export function useTableOperate<T extends TableData = TableData>(
   data: T[],
   getData: (isResetCurrent?: boolean) => Promise<void>,
-  executeResActions: (res: T, operateType: AntDesign.TableOperateType) => void
+  executeResActions: (
+    res: T,
+    operateType: AntDesign.TableOperateType
+  ) => Promise<AxiosError<App.Service.Response<unknown>, any> | null>
 ) {
   const { bool: drawerVisible, setFalse: closeDrawer, setTrue: openDrawer } = useBoolean();
 
@@ -157,7 +164,7 @@ export function useTableOperate<T extends TableData = TableData>(
 
   const [form] = Form.useForm<T>();
 
-  function handleAdd() {
+  function onAdd() {
     setOperateType('add');
     openDrawer();
   }
@@ -165,13 +172,13 @@ export function useTableOperate<T extends TableData = TableData>(
   /** the editing row data */
   const [editingData, setEditingData] = useState<T>();
 
-  function handleEdit(idOrData: T['id'] | T) {
+  function onEdit(idOrData: T['id'] | T) {
     if (typeof idOrData === 'object') {
       form.setFieldsValue(idOrData);
 
       setEditingData(idOrData);
     } else {
-      const findItem = data.find(item => item.id === idOrData);
+      const findItem = findNodeById(data, idOrData);
       if (findItem) {
         form.setFieldsValue(findItem);
 
@@ -223,12 +230,14 @@ export function useTableOperate<T extends TableData = TableData>(
     const res = await form.validateFields();
 
     // request
-    await executeResActions(res, operateType);
+    const error = await executeResActions(res, operateType);
 
-    window.$message?.success(t('common.updateSuccess'));
+    if (!error) {
+      window.$message?.success(t(`common.${operateType === 'add' ? 'addSuccess' : 'editSuccess'}`));
 
-    onClose();
-    getData();
+      onClose();
+      getData();
+    }
   }
 
   return {
@@ -243,10 +252,10 @@ export function useTableOperate<T extends TableData = TableData>(
       open: drawerVisible,
       operateType
     },
-    handleAdd,
-    handleEdit,
+    onAdd,
     onBatchDeleted,
     onDeleted,
+    onEdit,
     onSelectChange,
     openDrawer,
     operateType,

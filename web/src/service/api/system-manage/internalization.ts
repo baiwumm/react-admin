@@ -2,7 +2,7 @@
  * @Author: 白雾茫茫丶<baiwumm.com>
  * @Date: 2024-08-15 11:06:40
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-08-26 09:05:30
+ * @LastEditTime: 2025-02-13 14:44:13
  * @Description: 国际化模块接口
  */
 import { request } from '@/service/request';
@@ -15,8 +15,8 @@ const baseURL = '/system/internalization';
  */
 export const getInternalizationList = (params?: Api.SystemManage.InternalizationSearchParams) =>
   request<Api.Common.PaginatingQueryRecord<Api.SystemManage.Internalization>>({
-    url: baseURL,
     params,
+    url: baseURL
   });
 
 /**
@@ -25,9 +25,9 @@ export const getInternalizationList = (params?: Api.SystemManage.Internalization
  */
 export const createInternalization = (body: Api.SystemManage.SaveInternalization) =>
   request<Api.SystemManage.Internalization>({
-    url: baseURL,
-    method: 'post',
     data: body,
+    method: 'post',
+    url: baseURL
   });
 
 /**
@@ -36,17 +36,17 @@ export const createInternalization = (body: Api.SystemManage.SaveInternalization
  */
 export const updateInternalization = ({ id, ...body }: Api.SystemManage.SaveInternalization) =>
   request<Api.SystemManage.Internalization>({
-    url: `${baseURL}/${id}`,
-    method: 'put',
     data: body,
+    method: 'put',
+    url: `${baseURL}/${id}`
   });
 
 /**
  * @param {Api.Common.ColumnId} body
  * @description: 删除国际化
  */
-export const delInternalization = ({ id }: Api.Common.ColumnId) =>
+export const delInternalization = (id: string) =>
   request<Api.SystemManage.Internalization>({
-    url: `${baseURL}/${id}`,
     method: 'delete',
+    url: `${baseURL}/${id}`
   });

@@ -13,10 +13,11 @@ interface Props {
   readonly disabledDelete?: boolean;
   readonly itemAlign?: SpaceProps['align'];
   readonly loading?: boolean;
-  readonly onDelete: () => void;
+  readonly onDelete?: () => void;
   readonly prefix?: React.ReactNode;
   readonly refresh: () => void;
   readonly setColumnChecks: (checks: AntDesign.TableColumnCheck[]) => void;
+  readonly showBatchDelete?: boolean;
   readonly suffix?: React.ReactNode;
 }
 
@@ -31,6 +32,7 @@ const TableHeaderOperation: FC<Props> = ({
   prefix,
   refresh,
   setColumnChecks,
+  showBatchDelete = true,
   suffix
 }) => {
   const { t } = useTranslation();
@@ -53,20 +55,22 @@ const TableHeaderOperation: FC<Props> = ({
           >
             {t('common.add')}
           </Button>
-          <Popconfirm
-            title={t('common.confirmDelete')}
-            onConfirm={onDelete}
-          >
-            <Button
-              danger
-              ghost
-              disabled={disabledDelete}
-              icon={<IconIcRoundDelete className="text-icon" />}
-              size="small"
+          {showBatchDelete ? (
+            <Popconfirm
+              title={t('common.confirmDelete')}
+              onConfirm={onDelete}
             >
-              {t('common.batchDelete')}
-            </Button>
-          </Popconfirm>
+              <Button
+                danger
+                ghost
+                disabled={disabledDelete}
+                icon={<IconIcRoundDelete className="text-icon" />}
+                size="small"
+              >
+                {t('common.batchDelete')}
+              </Button>
+            </Popconfirm>
+          ) : null}
         </>
       )}
       <Button
