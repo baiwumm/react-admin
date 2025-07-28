@@ -187,7 +187,7 @@ export class XmwUser
 
   //最后一次登录ip
   @Column({
-    type: DataType.STRING(20),
+    type: DataType.STRING(100),
     comment: '最后一次登录ip',
   })
   login_last_ip?: string;
