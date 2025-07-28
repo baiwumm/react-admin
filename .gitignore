@@ -1,39 +1,44 @@
-# compiled output
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+**/node_modules
+# roadhog-api-doc ignore
+/src/utils/request-temp.js
+_roadhog-api-doc
+
+# production
 /dist
 /dist.*
-/node_modules
+
+# misc
+.DS_Store
+npm-debug.log*
+yarn-error.log
+
+/coverage
+.idea
+yarn.lock
+package-lock.json
+*bak
+.vscode
+pnpm-lock.yaml
 *.bat
 
-# Logs
-logs
+
+# visual studio code
+.history
 *.log
-npm-debug.log*
-pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
+functions/*
+.temp/**
 
-# OS
-.DS_Store
+# umi
+.umi
+.umi-production
+.umi-test
 
-# Tests
-/coverage
-/.nyc_output
+# screenshot
+screenshot
+.firebase
+.eslintcache
 
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-.env
+build

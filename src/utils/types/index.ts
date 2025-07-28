@@ -1,47 +1,14 @@
 /*
- * @Description: 类型标注
+ * @Description: 全局公共 type 接口
  * @Version: 2.0
  * @Author: 白雾茫茫丶
- * @Date: 2023-09-28 14:10:44
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 17:04:38
+ * @Date: 2023-08-31 08:56:55
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2024-10-21 09:20:33
  */
-import {
-  ANNOUNCEMENT_TYPE,
-  FLAG,
-  LANGS,
-  LAYOUT_TYPE,
-  MENU_THEME,
-  MENU_TYPE,
-  ORG_TYPE,
-  REQUEST_METHODS,
-  SEX,
-  STATUS,
-  TARGET_TYPE,
-} from '@/utils/enums';
-import type { UserAttributes } from '@/utils/types/system';
+import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 
-/**
- * @description: 公共的类型
- * @author: 白雾茫茫丶
- */
-export type CommonTypes = {
-  parent_id?: string; // 父级id
-  status: Status; // 组织状态
-  sort: number; // 排序
-  leader: string; // 岗位负责人
-  founder: string; // 创建人
-  describe: string; // 描述
-};
-
-/**
- * @description: 创建时间、更新时间
- * @author: 白雾茫茫丶
- */
-export type Times = {
-  created_time?: Date; // 创建时间
-  updated_time?: Date; // 最后一次更新时间
-};
+import { FLAG, LANGS, LOCAL_STORAGE, REQUEST_METHODS, ROUTES, STATUS } from '@/utils/enums'
 
 /**
  * @description: 获取枚举的所有 key
@@ -56,7 +23,50 @@ export type EnumKeys<T> = keyof T;
 export type EnumValues<T> = T[EnumKeys<T>];
 
 /**
- * @description: Response 返回体，默认是不分页，如果是分页查询，需要自己将 Model 带入
+ * @description: 状态
+ * @author: 白雾茫茫丶
+ */
+export type Status = EnumValues<typeof STATUS>
+
+/**
+ * @description: 反推数组的类型，type B = A[]，ArrayType<B> 等同于 返回 A
+ * @author: 白雾茫茫丶
+ */
+export type ArrayType<T extends any[]> = T extends Array<infer R> ? R : never;
+
+/**
+ * @description: 公共的类型
+ * @author: 白雾茫茫丶
+ */
+export type CommonTypes = {
+  parent_id?: string; // 父级id
+  status: Status; // 组织状态
+  sort: number; // 排序
+  leader: string; // 岗位负责人
+  founder: string; // 创建人
+  describe: string; // 描述
+}
+
+/**
+ * @description: 创建和更新时间
+ * @author: 白雾茫茫丶
+ */
+export type TableTimes = {
+  created_time: string; // 创建时间
+  updated_time: string; // 最后一次更新时间
+}
+
+/**
+ * @description: 查询时间
+ * @author: 白雾茫茫丶
+ */
+export type SearchTimes = {
+  start_time?: string; // 开始日期
+  end_time?: string; // 结束日期
+}
+
+/**
+ * @description: Response 返回体
  * @author: 白雾茫茫丶
  */
 export type Response<T = any> = {
@@ -75,76 +85,82 @@ export type PageResponse<T> = {
 };
 
 /**
- * @description: Session 存储对象
+ * @description: 默认分页查询参数
  * @author: 白雾茫茫丶
  */
-export type SessionTypes = {
-  currentUserInfo: UserAttributes; // 用户信息
-  verifyCode: string; // 验证码
-};
-
-/**
- * @description: 状态
- * @author: 白雾茫茫丶
- */
-export type Status = EnumValues<typeof STATUS>;
-
-/**
- * @description: 是否
- * @author: 白雾茫茫丶
- */
-export type Flag = EnumValues<typeof FLAG>;
-
-/**
- * @description: 语言类型
- * @author: 白雾茫茫丶
- */
-export type Langs = Partial<Record<EnumValues<typeof LANGS>, string>>;
+export type PaginationParams = {
+  current: number; // 当前页码
+  pageSize: number; // 每页条数
+}
 
 /**
  * @description: 请求方法
  * @author: 白雾茫茫丶
  */
-export type RequestMethods = EnumValues<typeof REQUEST_METHODS>;
+export type RequestMethods = EnumValues<typeof REQUEST_METHODS>
 
 /**
- * @description: 组织类型
+ * @description: 全局状态数据流
  * @author: 白雾茫茫丶
  */
-export type OrgTypes = EnumValues<typeof ORG_TYPE>;
+export type InitialStateTypes = {
+  Locales?: Record<string, any>;
+  Access_token?: string;
+  Settings?: Partial<LayoutSettings>;
+  CurrentUser?: API.USERMANAGEMENT;
+  Permissions?: string[];
+  RouteMenu?: API.MENUMANAGEMENT[];
+  Collapsed?: boolean;
+}
 
 /**
- * @description: 活动公告类型
+ * @description: 存储在 localstorage 的值
  * @author: 白雾茫茫丶
  */
-export type AnnouncementTypes = EnumValues<typeof ANNOUNCEMENT_TYPE>;
+export type AppLocalCacheTypes = {
+  [LOCAL_STORAGE.USER_INFO]?: API.USERMANAGEMENT;
+  [LOCAL_STORAGE.LAYOUT]?: Partial<LayoutSettings>;
+  [LOCAL_STORAGE.ACCESS_TOKEN]?: string;
+}
 
 /**
- * @description: 菜单类型
+ * @description: 用户登录
  * @author: 白雾茫茫丶
  */
-export type MenuTypes = EnumValues<typeof MENU_TYPE>;
+export type LoginTypes = {
+  access_token: string;
+  login_last_time: Date;
+}
 
 /**
- * @description: layout布局
+ * @description: 用户休眠
  * @author: 白雾茫茫丶
  */
-export type Layouts = EnumValues<typeof LAYOUT_TYPE>;
+export type LockSleepTypes = {
+  last_time: number;
+  isSleep: boolean;
+}
 
 /**
- * @description: 窗口打开方式
+ * @description: 语言类型
  * @author: 白雾茫茫丶
  */
-export type TargetTypes = EnumValues<typeof TARGET_TYPE>;
+export type Langs = EnumValues<typeof LANGS>
 
 /**
- * @description: 菜单主题
+ * @description: 是否
  * @author: 白雾茫茫丶
  */
-export type MenuTheme = EnumValues<typeof MENU_THEME>;
+export type Flag = EnumValues<typeof FLAG>
 
 /**
- * @description: 性别
+ * @description: 路由集合
  * @author: 白雾茫茫丶
  */
-export type Sex = EnumValues<typeof SEX>;
+export type PathNames = EnumValues<typeof ROUTES>
+
+/**
+ * @description: 图标格式
+ * @author: 白雾茫茫丶
+ */
+export type UmiIcon = `${'ri' | 'local' | 'fa6-solid' | 'simple-icons'}:${string}`

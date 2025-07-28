@@ -1,12 +1,3 @@
-/*
- * @Description: 枚举类型
- * @Version: 2.0
- * @Author: 白雾茫茫丶
- * @Date: 2023-09-28 14:12:07
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:59:19
- */
-
 /**
  * @description: 请求状态码
  * @author: 白雾茫茫丶
@@ -21,12 +12,127 @@ export enum REQUEST_CODE {
 }
 
 /**
- * @description: 请求提示语
+ * @description: 请求方式
  * @author: 白雾茫茫丶
  */
-export enum REQUEST_MSG {
-  SUCCESS = '操作成功',
-  FAILURE = '操作失败',
+export enum REQUEST_METHODS {
+  GET = 'GET',
+  POST = 'POST',
+  PUT = 'PUT',
+  DELETE = 'DELETE',
+  PATCH = 'PATCH'
+}
+
+/**
+ * @description: 请求前缀
+ * @author: 白雾茫茫丶
+ */
+export enum BASEURL {
+  API = '/api'
+}
+
+/**
+ * @description: 存储在 localstorage 的 key
+ * @author: 白雾茫茫丶
+ */
+export enum LOCAL_STORAGE {
+  USER_INFO = 'USER_INFO', // 用户信息
+  ACCESS_TOKEN = 'ACCESS_TOKEN', // ACCESS_TOKEN
+  LAYOUT = 'LAYOUT', // 布局
+  LOCK_SLEEP = 'LOCK_SLEEP', // 睡眠
+}
+
+/**
+ * @description: 菜单路由
+ * @author: 白雾茫茫丶
+ */
+export enum ROUTES {
+  LOGIN = '/user/login', // 登录页
+  DASHBOARD = '/dashboard', // 指示面板
+  WORKBENCH = '/dashboard/work-bench', // 指示面板-工作台
+  DEPENDENCE = '/dashboard/environmental-dependence', // 指示面板-环境依赖
+  ADMINISTRATIVE = '/administrative', // 智能行政
+  ANNOUNCEMENT = '/administrative/announcement', // 智能行政-活动公告
+  ORGANIZATION = '/administrative/organization', // 智能行政-组织管理
+  JOBSMANAGEMENT = '/administrative/jobs-management', // 智能行政-岗位管理
+  PERSONALCENTER = '/personal-center', // 个人中心
+  PERSONALINFOMATION = '/personal-center/personal-information', // 个人中心-个人信息
+  PERSONALSETTING = '/personal-center/personal-setting', // 个人中心-个人设置
+  FEATURES = '/features', // 功能页
+  CAPTCHA = '/features/captcha', // 验证码
+  GANTT = '/features/gantt', // 甘特图
+  VIEWER = '/features/viewer', // 图片预览
+  LAZYLOAD = '/features/lazyload', // 懒加载
+  COLORTHIEF = '/features/colorthief', // 图片取色盘
+  EYEDROPPER = '/features/eye-dropper', // 系统级取色器
+  FLOW = '/features/flow', // 流程图
+  SWIPER = '/features/swiper', // Swiper
+  FILEPREVIEW = '/features/file-preview', // 文件预览
+  CHARTS = '/features/charts', // 图表
+  TECHNICALDOCUMENT = '/technical-document', // 技术文档
+  REACT = '/technical-document/react', // 技术文档 - React
+  NEST = '/technical-document/nest', // 技术文档 - Nest
+  ANTDESIGN = '/technical-document/ant-design', // 技术文档 - Ant-design
+  UMI = '/technical-document/umi', // 技术文档 - Umi
+  SYSTEM = '/system', // 系统设置
+  USERMANAGEMENT = '/system/user-management', // 系统设置-用户管理
+  MENUMANAGEMENT = '/system/menu-management', // 系统设置-菜单管理
+  ROLEMANAGEMENT = '/system/role-management', // 系统设置-角色管理
+  INTERNATIONALIZATION = '/system/internationalization', // 系统设置-国际化
+  OPERATIONLOG = '/system/operation-log', // 系统设置-操作日志
+}
+
+/**
+ * @description: 公共国际化 key
+ * @author: 白雾茫茫丶
+ */
+export enum INTERNATION {
+  OPERATION = 'global.table.operation', // 操作
+  STATUS = 'global.status', // 状态
+  STATUS_DISABLE = 'global.status.disable', // 禁用
+  STATUS_NORMAL = 'global.status.normal', // 正常
+  SORT = 'global.table.sort', // 排序
+  SORT_TIP = 'global.table.sort.tooltip', // 排序 Tip
+  CREATED_TIME = 'global.table.created_time', // 创建时间
+  DESCRIBE = 'global.table.describe', // 描述
+  DELETE_CONTENT = 'global.message.delete.content', // 删除提示内容
+  DELETE_TITLE = 'global.message.delete.title', // 删除提示标题
+  PARENT_ID = 'global.form.parent_id', // 添加子级
+  PARENT_ID_TIP = 'global.form.parent_id.tooltip', // 添加子级 Tip
+  PLACEHOLDER = 'global.form.placeholder', // 请输入
+  PLACEHOLDER_UPLOAD = 'global.form.placeholder.upload', // 请上传
+  PLACEHOLDER_SELETED = 'global.form.placeholder.seleted', // 请选择
+  LEADER = 'global.form.leader', // 负责人
+  BUTTON_SUBMIT = 'global.button.submit', // 提交
+  BUTTON_MODIFY = 'global.button.modify', // 修改
+  BUTTON_CONFIRM = 'global.button.confirm', // 确认
+  WARM_TIPS = 'global.warm-tips', // 温馨提示
+  FLAG_YES = 'global.flag.yes', // 是
+  FLAG_NO = 'global.flag.no', // 否
+  POPCONFIRM_TITLE = 'global.popconfirm.title', // 确认执行此操作吗？
+  BASICLAYOUT = 'components.BasicLayout', // 布局组件
+  UPLOADIMAGE = 'components.UploadImage'
+}
+
+/**
+ * @description: 表格下拉操作类型
+ * @author: 白雾茫茫丶
+ */
+export enum OPERATION {
+  ADD = 'add', // 新增
+  EDIT = 'edit', // 编辑
+  DELETE = 'delete', // 删除
+  ADDCHILD = 'add-child', // 添加子级
+  BATCHDELETE = 'batch-delete', // 批量删除
+}
+
+/**
+ * @description: 登录类型
+ * @author: 白雾茫茫丶
+ */
+export enum LOGIN_TYPE {
+  MOBILE = 'mobile', // 手机登录
+  ACCOUNT = 'account', // 账号登录
 }
 
 /**
@@ -48,6 +154,16 @@ export enum FLAG {
 }
 
 /**
+ * @description: 性别
+ * @author: 白雾茫茫丶
+ */
+export enum SEX {
+  FEMALE = '0', // 女
+  MALE = '1', // 男
+  PRIVACY = '2', // 隐私
+}
+
+/**
  * @description: 消息类型
  * @author: 白雾茫茫丶
  */
@@ -56,16 +172,6 @@ export enum ANNOUNCEMENT_TYPE {
   ACTIVITY = '2', // 活动
   MESSAGE = '3', // 消息
   NOTIFICATION = '4', // 通知
-}
-
-/**
- * @description: 性别
- * @author: 白雾茫茫丶
- */
-export enum SEX {
-  FEMALE = '0', // 女
-  MALE = '1', // 男
-  PRIVACY = '2', // 隐私
 }
 
 /**
@@ -97,7 +203,7 @@ export enum TARGET_TYPE {
   BLANK = '_blank',
   SELF = '_self',
   PARENT = '_parent',
-  TOP = '_top',
+  TOP = '_top'
 }
 
 /**
@@ -131,13 +237,22 @@ export enum LANGS {
 }
 
 /**
- * @description: 请求方式
+ * @description: EventBus type
  * @author: 白雾茫茫丶
  */
-export enum REQUEST_METHODS {
-  GET = 'GET',
-  POST = 'POST',
-  PUT = 'PUT',
-  DELETE = 'DELETE',
-  PATCH = 'PATCH',
+export enum EVENTBUS_TYPE {
+  ANNOUNCEMENT = 'announcement-detail', // 查看公告详情
+  UPDATEUNREADYCOUNT = 'update-unready-count', // 更新未读消息数量
+}
+
+/**
+ * @description: TabsLayout 多标签类型
+ * @author: 白雾茫茫丶
+ */
+export enum TABSLAYOUT {
+  CLOSE = 'close', // 关闭当前
+  REFRESH = 'refresh', // 重新加载
+  RIGHT = 'right', // 关闭右侧
+  LEFT = 'left', // 关闭左侧
+  OTHERS = 'others', // 关闭其它
 }
