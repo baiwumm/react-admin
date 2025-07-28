@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-12 17:06:37
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-24 14:08:24
+ * @LastEditTime: 2025-07-28 11:30:33
  */
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'; // swagger 接口文档
@@ -48,7 +48,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   // 全局请求拦截中间件
-  // app.use(requestMiddleware);
+  app.use(requestMiddleware);
 
   // 错误异常捕获 和 过滤处理
   app.useGlobalFilters(new AllExceptionsFilter());
@@ -74,9 +74,9 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup(process.env.SWAGGER_SETUP_PATH, app, document);
-  await app.listen(App_configuration().port, () => {
+  await app.listen(process.env.PORT || App_configuration().port, () => {
     Logger.info(
-      `服务已经启动,接口请访问:http://www.localhost:${App_configuration().port
+      `服务已经启动,接口请访问:http://www.localhost:${process.env.PORT || App_configuration().port
       }`,
     );
   });
