@@ -186,7 +186,6 @@ export class XmwUser
   login_num: number;
 
   //最后一次登录ip
-  @IsIP
   @Column({
     type: DataType.STRING(20),
     comment: '最后一次登录ip',
