@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-25 10:34:23
- * @LastEditors: Cyan
- * @LastEditTime: 2022-11-25 10:43:55
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-07-28 11:02:05
  */
 import { ApiProperty } from '@nestjs/swagger';
 
@@ -14,5 +14,5 @@ export class UploadFileDto {
     description: '文件流',
     format: 'binary',
   })
-  file: BinaryData;
+  file: any;
 }
