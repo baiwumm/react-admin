@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-25 14:29:53
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-11-18 11:32:05
+ * @LastEditTime: 2025-07-28 11:47:58
  */
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
@@ -66,7 +66,7 @@ export class AuthService {
         const where: WhereOptions = { user_id: userInfo.user_id };
         const params = {
           token,
-          login_last_ip: clinetIp,
+          // login_last_ip: clinetIp,
           login_last_time: new Date(),
         };
         // 执行更新操作
