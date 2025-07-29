@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-09-08 11:09:03
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-11-18 13:42:48
+ * @LastEditTime: 2025-07-28 17:54:15
  */
 import { DefaultFooter } from '@ant-design/pro-components';
 import { Icon } from '@umijs/max';
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
   return (
     <DefaultFooter
       style={{ background: 'none' }}
-      copyright={`${currentYear} 白雾茫茫丶 by baiwumm@foxmail.com`}
+      copyright={`${currentYear} 白雾茫茫丶 by me@baiwumm.com`}
       links={[
         {
           key: '白雾茫茫丶',

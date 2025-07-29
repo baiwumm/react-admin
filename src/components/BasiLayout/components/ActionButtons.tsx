@@ -28,13 +28,8 @@ const ActionButtons: FC = () => {
       {/* Github issues*/}
       <FloatButton
         icon={<Icon icon="ri:questionnaire-line" />}
-        onClick={() => window.open('//github.com/baiwumm/Xmw-Admin/issues')}
+        onClick={() => window.open('//github.com/baiwumm/react-admin/issues')}
         tooltip={formatMessage({ id: `${INTERNATION.BASICLAYOUT}.ActionButtons.github-issues` })}
-      />
-      {/* 项目文档 */}
-      <FloatButton
-        onClick={() => window.open('//docs.baiwumm.com/personal-project/xmw-admin')}
-        tooltip={formatMessage({ id: `${INTERNATION.BASICLAYOUT}.ActionButtons.document` })}
       />
       {/* 刷新页面 */}
       <FloatButton

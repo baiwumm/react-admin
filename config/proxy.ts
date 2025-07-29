@@ -4,7 +4,7 @@
  * @Author: Cyan
  * @Date: 2022-09-08 15:54:03
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-24 14:24:05
+ * @LastEditTime: 2025-07-28 17:46:18
  */
 /**
  * @name 代理的配置
@@ -25,8 +25,8 @@ export default {
    * @author: Cyan
    */
   dev: {
-    '/api/': {
-      target: ' https//react-admin-api.baiwumm.com', // 代理地址
+    '/api': {
+      target: 'https://react-admin-api.baiwumm.com', // 代理地址
       // 配置了这个可以从 http 代理到 https
       // 依赖 origin 的功能可能需要这个，比如 cookie
       changeOrigin: true,
