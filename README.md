@@ -32,10 +32,6 @@ React Admin 是一个现代化的企业级中后台管理系统框架，采用�
 
 - 🔑 **体验账号**：用户名 `admin`，密码 `abc123456`
 
-- 📦 **代码仓库**：
-  - GitHub: [https://github.com/baiwumm/react-admin/](https://github.com/baiwumm/react-admin/)
-  - Gitee: [https://gitee.com/baiwumm/react-admin/](https://gitee.com/baiwumm/react-admin/)
-
 - 📚 **API 文档**：[Swagger 接口文档](https://react.baiwumm.com/docs)
 
 - ⭐ **支持项目**：如果这个项目对您有帮助，请给个 Star，是对作者最大的鼓励！
@@ -44,12 +40,11 @@ React Admin 是一个现代化的企业级中后台管理系统框架，采用�
 
 1. 📚 **动态国际化**：内置完善的国际化解决方案，支持多语言动态切换，满足全球化业务需求
 2. 📝 **完整审计日志**：自动记录用户的 CRUD 操作，提供全面的系统行为追踪和审计能力
-3. 🔐 **RBAC权限管理**：基于角色的访问控制系统，实现用户-角色-权限的精细化权限管理
-4. 🧩 **动态路由菜单**：根据用户角色权限动态生成路由和菜单，实现真正的按需加载
-5. 📢 **实时消息推送**：基于 SSE (Server-Sent Events) 技术实现服务器到客户端的实时消息推送
-6. 🎨 **主题定制**：支持多种预设主题，并可根据企业VI进行个性化定制
-7. 🛡️ **TypeScript支持**：全面使用 TypeScript 开发，提供完整的类型定义，增强代码健壮性
-8. 🧪 **组件封装**：包含大量实用的业务组件和功能展示，可直接应用于实际项目
+3. 🧩 **动态路由菜单**：根据用户角色权限动态生成路由和菜单，实现真正的按需加载
+4. 📢 **实时消息推送**：基于 SSE (Server-Sent Events) 技术实现服务器到客户端的实时消息推送
+5. 🎨 **主题定制**：支持多种预设主题，并可根据企业VI进行个性化定制
+6. 🛡️ **TypeScript支持**：全面使用 TypeScript 开发，提供完整的类型定义，增强代码健壮性
+7. 🧪 **组件封装**：包含大量实用的业务组件和功能展示，可直接应用于实际项目
 
 ## 🔧 环境要求与依赖
 
@@ -66,7 +61,6 @@ React Admin 是一个现代化的企业级中后台管理系统框架，采用�
 
 - 前端框架：[Umi](https://umijs.org/) (4.x)
 - UI组件库：[Ant Design](https://ant.design/) (5.x)
-- 状态管理：[Redux](https://redux.js.org/) + [Redux Toolkit](https://redux-toolkit.js.org/)
 - 后端框架：[Nest.js](https://nestjs.com/) (10.x)
 - ORM框架：[Sequelize](https://sequelize.org/) (6.x)
 
