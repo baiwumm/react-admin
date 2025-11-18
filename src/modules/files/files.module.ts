@@ -3,15 +3,15 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-17 17:49:35
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:54:55
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:26:12
  */
 import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MulterModule } from '@nestjs/platform-express';
 import { randomUUID } from 'crypto'; // 随机 uuid
-import * as moment from 'moment'; // 时间插件 moment
+import moment from 'moment' // 时间插件 moment
 import { diskStorage } from 'multer';
 
 import { checkDirAndCreate } from '@/utils';

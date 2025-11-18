@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-17 17:49:53
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:55:03
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:27:53
  */
 import {
   Controller,
@@ -22,9 +22,9 @@ import {
   ApiHeader,
   ApiTags,
 } from '@nestjs/swagger'; // swagger 接口文档
-import * as OSS from 'ali-oss'; // oss sdk
+import OSS from 'ali-oss'; // oss sdk
 import { randomUUID } from 'crypto'; // 随机 uuid
-import * as moment from 'moment'; // 时间插件 moment
+import moment from 'moment'; // 时间插件 moment
 import { diskStorage } from 'multer';
 import { normalize } from 'path';
 

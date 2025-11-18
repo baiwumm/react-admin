@@ -1,7 +1,7 @@
 // src/utils/log4js.ts
 import Chalk from 'chalk'; // 颜色库
 import * as Log4js from 'log4js';
-import * as Moment from 'moment'; // 处理时间的工具
+import moment from 'moment'; // 处理时间的工具
 import * as Path from 'path';
 import * as StackTrace from 'stacktrace-js';
 import * as Util from 'util';
@@ -59,7 +59,7 @@ Log4js.addLayout('Awesome-nest', (logConfig: any) => {
     const messageOutput: string = messageList.join(' ');
     const positionOutput: string = position ? ` [${position}]` : '';
     const typeOutput = `[${logConfig.type}] ${logEvent.pid.toString()}   - `;
-    const dateOutput = `${Moment(logEvent.startTime).format(
+    const dateOutput = `${moment(logEvent.startTime).format(
       'YYYY-MM-DD HH:mm:ss',
     )}`;
     const moduleOutput: string = moduleName

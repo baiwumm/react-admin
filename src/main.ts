@@ -4,12 +4,12 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-12 17:06:37
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2025-07-28 11:30:33
+ * @LastEditTime: 2025-11-18 16:25:09
  */
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'; // swagger 接口文档
-import * as express from 'express';
-import * as session from 'express-session';
+import express from 'express';
+import session from 'express-session';
 import { join } from 'path';
 
 import { HttpReqTransformInterceptor } from '@/interceptor/http-req.interceptor'; // 全局响应拦截器
