@@ -9,6 +9,7 @@ import routes from './routes';
 const { REACT_APP_ENV = 'dev' } = process.env;
 
 export default defineConfig({
+  exportStatic: false, // 👈 关闭静态导出
   /**
    * @name 开启 多tab标签页支持
    * @doc https://juejin.cn/post/7153525746751766559
