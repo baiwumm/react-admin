@@ -4,14 +4,14 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-16 10:50:33
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-10 11:28:54
+ * @LastEditTime: 2025-11-18 16:50:11
  */
 import { Request } from 'express';
 import * as fs from 'fs';
 
-import { XmwInternational } from '@/models/xmw_international.model'; // 数据库实体
-import { REQUEST_CODE, REQUEST_MSG } from '@/utils/enums';
-import type { Response } from '@/utils/types';
+import { XmwInternational } from '../models/xmw_international.model'; // 数据库实体
+import { REQUEST_CODE, REQUEST_MSG } from './enums';
+import type { Response } from './types';
 
 /**
  * @description: 统一返回体

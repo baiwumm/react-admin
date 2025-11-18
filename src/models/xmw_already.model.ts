@@ -9,8 +9,8 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import { XmwAnnouncement } from '@/models/xmw_announcement.model';
-import type { AlreadyAttributes } from '@/utils/types/administrative';
+import { XmwAnnouncement } from '../models/xmw_announcement.model';
+import type { AlreadyAttributes } from '../utils/types/administrative';
 
 @Table({ tableName: 'xmw_already' })
 export class XmwAlready

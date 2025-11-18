@@ -3,13 +3,13 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-19 17:19:57
- * @LastEditors: Cyan
- * @LastEditTime: 2022-12-01 17:20:22
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:41:44
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import { ResponseDto } from '@/dto/response.dto';
-import { XmwOrganization } from '@/models/xmw_organization.model'; // xmw_organization 实体
+import { ResponseDto } from '../../../../dto/response.dto';
+import { XmwOrganization } from '../../../../models/xmw_organization.model'; // xmw_organization 实体
 
 /**
  * @description: 组织管理列表响应体结构 Dto

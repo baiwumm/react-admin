@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-17 17:49:35
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2025-11-18 16:26:12
+ * @LastEditTime: 2025-11-18 16:43:33
  */
 import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
@@ -14,7 +14,7 @@ import { randomUUID } from 'crypto'; // 随机 uuid
 import moment from 'moment' // 时间插件 moment
 import { diskStorage } from 'multer';
 
-import { checkDirAndCreate } from '@/utils';
+import { checkDirAndCreate } from '../../utils';
 
 import { FilesController } from './files.controller'; // Files Controller
 import { FilesService } from './files.service'; // Files Service

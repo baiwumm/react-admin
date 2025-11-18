@@ -3,25 +3,25 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-09 17:44:15
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-10-12 09:21:47
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:49:12
  */
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { Op } from 'sequelize';
 import type { WhereOptions } from 'sequelize/types';
 
-import { XmwJobs } from '@/models/xmw_jobs.model';
-import { XmwOrganization } from '@/models/xmw_organization.model';
-import { XmwRole } from '@/models/xmw_role.model';
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import { responseMessage } from '@/utils'; // 全局工具函数
+import { XmwJobs } from '../../../models/xmw_jobs.model';
+import { XmwOrganization } from '../../../models/xmw_organization.model';
+import { XmwRole } from '../../../models/xmw_role.model';
+import { XmwUser } from '../../../models/xmw_user.model'; // xmw_user 实体
+import { responseMessage } from '../../../utils'; // 全局工具函数
 import type {
   PageResponse,
   Response,
   SessionTypes,
   Status,
-} from '@/utils/types';
+} from '../../../utils/types';
 
 import { ListUserManagementDto, SaveUserManagementDto } from './dto';
 

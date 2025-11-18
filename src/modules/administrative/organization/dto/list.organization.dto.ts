@@ -3,12 +3,12 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-20 16:50:38
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 17:17:06
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:41:26
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import type { OrgTypes, Status } from '@/utils/types';
+import type { OrgTypes, Status } from '../../../../utils/types';
 
 export class ListOrganizationDto {
   @ApiProperty({

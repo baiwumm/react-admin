@@ -3,13 +3,13 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-21 10:59:21
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:37:34
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:40:49
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import { ResponseDto } from '@/dto/response.dto';
-import { XmwJobs } from '@/models/xmw_jobs.model'; // xmw_jobs 实体
+import { ResponseDto } from '../../../../dto/response.dto';
+import { XmwJobs } from '../../../../models/xmw_jobs.model'; // xmw_jobs 实体
 
 /**
  * @description: 岗位管理列表响应体结构 Dto

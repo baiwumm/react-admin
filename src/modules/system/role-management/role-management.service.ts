@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-28 17:39:28
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-21 15:26:22
+ * @LastEditTime: 2025-11-18 16:47:39
  */
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
@@ -12,16 +12,16 @@ import { Op } from 'sequelize';
 import type { WhereOptions } from 'sequelize/types';
 import { Sequelize } from 'sequelize-typescript';
 
-import { XmwMenu } from '@/models/xmw_menu.model';
-import { XmwPermission } from '@/models/xmw_permission.model';
-import { XmwRole } from '@/models/xmw_role.model'; // xmw_role 实体
-import { responseMessage } from '@/utils'; // 全局工具函数
+import { XmwMenu } from '../../../models/xmw_menu.model';
+import { XmwPermission } from '../../../models/xmw_permission.model';
+import { XmwRole } from '../../../models/xmw_role.model'; // xmw_role 实体
+import { responseMessage } from '../../../utils'; // 全局工具函数
 import type {
   PageResponse,
   Response,
   SessionTypes,
   Status,
-} from '@/utils/types';
+} from '../../../utils/types';
 
 import { ListRoleManagementDto, SaveRoleManagementDto } from './dto';
 

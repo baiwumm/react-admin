@@ -3,14 +3,14 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-25 10:34:23
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:50:52
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:42:56
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import { ResponseDto } from '@/dto/response.dto';
-import { XmwMenu } from '@/models/xmw_menu.model'; // xmw_menu 实体
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
+import { ResponseDto } from '../../../dto/response.dto';
+import { XmwMenu } from '../../../models/xmw_menu.model'; // xmw_menu 实体
+import { XmwUser } from '../../../models/xmw_user.model'; // xmw_user 实体
 
 /**
  * @description: 登录参数

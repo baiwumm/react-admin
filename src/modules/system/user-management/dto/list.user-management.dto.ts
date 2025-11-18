@@ -8,7 +8,7 @@
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import type { Sex, Status } from '@/utils/types';
+import type { Sex, Status } from '../../../../utils/types';
 
 export class ListUserManagementDto {
   @ApiProperty({

@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-28 17:39:08
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 17:01:39
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:47:22
  */
 import {
   Body,
@@ -28,9 +28,9 @@ import {
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger'; // swagger 接口文档
-import { LoggerInterceptor } from '@/interceptor/logger.interceptor';
-import { DeleteResponseDto, UpdateResponseDto } from '@/dto/response.dto'; // 响应体 Dto
-import type { SessionTypes } from '@/utils/types';
+import { LoggerInterceptor } from '../../../interceptor/logger.interceptor';
+import { DeleteResponseDto, UpdateResponseDto } from '../../../dto/response.dto'; // 响应体 Dto
+import type { SessionTypes } from '../../../utils/types';
 
 import {
   CreateRoleManagementDto,

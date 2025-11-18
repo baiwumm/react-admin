@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2023-09-28 14:10:44
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 17:04:38
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:51:19
  */
 import {
   ANNOUNCEMENT_TYPE,
@@ -18,8 +18,8 @@ import {
   SEX,
   STATUS,
   TARGET_TYPE,
-} from '@/utils/enums';
-import type { UserAttributes } from '@/utils/types/system';
+} from '../enums';
+import type { UserAttributes } from './system';
 
 /**
  * @description: 公共的类型

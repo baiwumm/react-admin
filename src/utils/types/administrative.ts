@@ -12,7 +12,7 @@ import type {
   Flag,
   OrgTypes,
   Times,
-} from '@/utils/types';
+} from '../types';
 
 import { UserAttributes } from './system';
 

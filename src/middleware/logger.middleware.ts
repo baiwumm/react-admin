@@ -3,13 +3,13 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-17 08:54:02
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:22:15
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:36:37
  */
 import { Injectable, NestMiddleware } from '@nestjs/common';
 import { NextFunction, Request, Response } from 'express';
 
-import { Logger } from '@/utils/log4js';
+import { Logger } from '../utils/log4js';
 
 @Injectable()
 export class LoggerMiddleware implements NestMiddleware {

@@ -3,8 +3,8 @@ import { PassportStrategy } from '@nestjs/passport';
 import { Request } from 'express';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 
-import App_configuration from '@/config/configuration'; // 全局配置
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
+import App_configuration from '../../config/configuration'; // 全局配置
+import { XmwUser } from '../../models/xmw_user.model'; // xmw_user 实体
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {

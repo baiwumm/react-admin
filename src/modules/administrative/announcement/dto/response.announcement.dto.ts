@@ -3,15 +3,15 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2023-08-25 16:41:00
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 17:56:52
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:39:53
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import { ResponseDto } from '@/dto/response.dto';
-import { XmwAlready } from '@/models/xmw_already.model'; // xmw_already 实体
-import { XmwAnnouncement } from '@/models/xmw_announcement.model'; // xmw_announcement 实体
-import type { PageResponse } from '@/utils/types';
+import { ResponseDto } from '../../../../dto/response.dto';
+import { XmwAlready } from '../../../../models/xmw_already.model'; // xmw_already 实体
+import { XmwAnnouncement } from '../../../../models/xmw_announcement.model'; // xmw_announcement 实体
+import type { PageResponse } from '../../../../utils/types';
 
 /**
  * @description: 活动公告列表响应体结构 Dto

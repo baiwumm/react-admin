@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-27 10:13:54
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 17:23:20
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:37:50
  */
 import {
   BelongsTo,
@@ -18,16 +18,16 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import { XmwInternational } from '@/models/xmw_international.model'; // 数据库实体
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
+import { XmwInternational } from '../models/xmw_international.model'; // 数据库实体
+import { XmwUser } from '../models/xmw_user.model'; // xmw_user 实体
 import type {
   Layouts,
   MenuTheme,
   MenuTypes,
   Status,
   TargetTypes,
-} from '@/utils/types';
-import type { MenuAttributes } from '@/utils/types/system';
+} from '../utils/types';
+import type { MenuAttributes } from '../utils/types/system';
 @Table({ tableName: 'xmw_menu', underscored: false })
 export class XmwMenu
   extends Model<MenuAttributes, MenuAttributes>

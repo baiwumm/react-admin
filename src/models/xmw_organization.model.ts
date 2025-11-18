@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-16 11:06:36
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 17:24:46
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:38:07
  */
 import {
   Column,
@@ -18,8 +18,8 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import type { OrgTypes, Status } from '@/utils/types';
-import type { OrgAttributes } from '@/utils/types/administrative';
+import type { OrgTypes, Status } from '../utils/types';
+import type { OrgAttributes } from '../utils/types/administrative';
 
 @Table({ tableName: 'xmw_organization' })
 export class XmwOrganization

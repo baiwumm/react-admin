@@ -11,10 +11,10 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import { XmwAlready } from '@/models/xmw_already.model';
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import type { AnnouncementTypes, Status } from '@/utils/types';
-import { AnnouncementAttributes } from '@/utils/types/administrative';
+import { XmwAlready } from '../models/xmw_already.model';
+import { XmwUser } from '../models/xmw_user.model'; // xmw_user 实体
+import type { AnnouncementTypes, Status } from '../utils/types';
+import { AnnouncementAttributes } from '../utils/types/administrative';
 
 @Table({ tableName: 'xmw_announcement' })
 export class XmwAnnouncement

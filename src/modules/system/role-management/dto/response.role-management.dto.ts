@@ -3,14 +3,14 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-19 17:19:57
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 16:58:06
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:48:06
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import { ResponseDto } from '@/dto/response.dto';
-import { XmwRole } from '@/models/xmw_role.model'; // xmw_role 实体
-import type { PageResponse } from '@/utils/types';
+import { ResponseDto } from '../../../../dto/response.dto';
+import { XmwRole } from '../../../../models/xmw_role.model'; // xmw_role 实体
+import type { PageResponse } from '../../../../utils/types';
 
 /**
  * @description: 角色管理列表响应体结构 Dto

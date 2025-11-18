@@ -4,13 +4,13 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-19 11:19:47
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-24 10:53:18
+ * @LastEditTime: 2025-11-18 16:41:07
  */
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 
-import { XmwOrganization } from '@/models/xmw_organization.model'; // xmw_organization 实体
-import { OperationLogsModule } from '@/modules/system/operation-logs/operation-logs.module';
+import { XmwOrganization } from '../../../models/xmw_organization.model'; // xmw_organization 实体
+import { OperationLogsModule } from '../../../modules/system/operation-logs/operation-logs.module';
 
 import { OrganizationController } from './organization.controller'; // Organization Controller
 import { OrganizationService } from './organization.service'; // Organization Service

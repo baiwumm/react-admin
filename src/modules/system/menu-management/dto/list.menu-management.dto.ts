@@ -3,12 +3,12 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-27 11:33:13
- * @LastEditors: Cyan
- * @LastEditTime: 2022-11-09 09:44:29
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:45:14
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import type { MenuTypes, Status } from '@/utils/types';
+import type { MenuTypes, Status } from '../../../../utils/types';
 
 export class ListMenuManagementDto {
   @ApiProperty({

@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-16 10:57:24
- * @LastEditors: Cyan
- * @LastEditTime: 2022-12-01 17:19:53
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:37:28
  */
 import {
   BelongsTo,
@@ -19,8 +19,8 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import { XmwOrganization } from '@/models/xmw_organization.model';
-import type { JobsAttributes } from '@/utils/types/administrative';
+import { XmwOrganization } from '../models/xmw_organization.model';
+import type { JobsAttributes } from '../utils/types/administrative';
 
 @Table({ tableName: 'xmw_jobs' })
 export class XmwJobs

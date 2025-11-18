@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-28 17:23:20
- * @LastEditors: Cyan
- * @LastEditTime: 2022-11-09 16:55:47
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:38:20
  */
 import {
   BelongsTo,
@@ -17,9 +17,9 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import { XmwMenu } from '@/models/xmw_menu.model';
-import { XmwRole } from '@/models/xmw_role.model';
-import type { PermissionAttributes } from '@/utils/types/system';
+import { XmwMenu } from '../models/xmw_menu.model';
+import { XmwRole } from '../models/xmw_role.model';
+import type { PermissionAttributes } from '../utils/types/system';
 
 @Table({ tableName: 'xmw_permission' })
 export class XmwPermission

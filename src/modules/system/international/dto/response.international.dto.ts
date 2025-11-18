@@ -3,13 +3,13 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-19 17:19:57
- * @LastEditors: Cyan
- * @LastEditTime: 2022-11-30 10:50:02
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:44:33
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import { ResponseDto } from '@/dto/response.dto';
-import { XmwInternational } from '@/models/xmw_international.model'; // xmw_international 实体
+import { ResponseDto } from '../../../../dto/response.dto';
+import { XmwInternational } from '../../../../models/xmw_international.model'; // xmw_international 实体
 
 /**
  * @description: 国际化列表响应体结构 Dto

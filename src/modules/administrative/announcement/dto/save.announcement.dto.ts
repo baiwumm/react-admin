@@ -3,12 +3,12 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2023-08-25 16:50:16
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 17:15:27
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:40:03
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import type { AnnouncementTypes, Flag, Status } from '@/utils/types';
+import type { AnnouncementTypes, Flag, Status } from '../../../../utils/types';
 
 /**
  * @description: 保存活动公告数据 DTO

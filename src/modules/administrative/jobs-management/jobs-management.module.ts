@@ -4,13 +4,13 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-19 11:19:47
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-24 14:05:39
+ * @LastEditTime: 2025-11-18 16:40:25
  */
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 
-import { XmwJobs } from '@/models/xmw_jobs.model'; // xmw_jobs 实体
-import { OperationLogsModule } from '@/modules/system/operation-logs/operation-logs.module';
+import { XmwJobs } from '../../../models/xmw_jobs.model'; // xmw_jobs 实体
+import { OperationLogsModule } from '../../../modules/system/operation-logs/operation-logs.module';
 
 import { JobsManagementController } from './jobs-management.controller'; // JobsManagement Controller
 import { JobsManagementService } from './jobs-management.service'; // JobsManagement Service

@@ -19,11 +19,11 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import { XmwJobs } from '@/models/xmw_jobs.model';
-import { XmwOrganization } from '@/models/xmw_organization.model';
-import { XmwRole } from '@/models/xmw_role.model';
-import type { Sex, Status } from '@/utils/types';
-import type { UserAttributes } from '@/utils/types/system';
+import { XmwJobs } from '../models/xmw_jobs.model';
+import { XmwOrganization } from '../models/xmw_organization.model';
+import { XmwRole } from '../models/xmw_role.model';
+import type { Sex, Status } from '../utils/types';
+import type { UserAttributes } from '../utils/types/system';
 
 @Table({ tableName: 'xmw_user' })
 export class XmwUser

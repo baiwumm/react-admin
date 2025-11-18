@@ -3,12 +3,12 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-28 18:06:14
- * @LastEditors: Cyan
- * @LastEditTime: 2022-11-09 14:10:09
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:48:17
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import type { Status } from '@/utils/types';
+import type { Status } from '../../../../utils/types';
 
 /**
  * @description: 保存角色数据 Dto

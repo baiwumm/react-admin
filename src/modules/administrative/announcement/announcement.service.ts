@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2023-08-25 16:18:06
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-05-21 15:14:49
+ * @LastEditTime: 2025-11-18 16:39:31
  */
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
@@ -12,12 +12,12 @@ import { Op } from 'sequelize';
 import type { WhereOptions } from 'sequelize/types';
 import { Sequelize } from 'sequelize-typescript';
 
-import { XmwAlready } from '@/models/xmw_already.model'; // xmw_already 实体
-import { XmwAnnouncement } from '@/models/xmw_announcement.model'; // xmw_announcement 实体
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import { responseMessage } from '@/utils'; // 全局工具函数
-import { ANNOUNCEMENT_TYPE } from '@/utils/enums';
-import type { Flag, PageResponse, Response, SessionTypes } from '@/utils/types';
+import { XmwAlready } from '../../../models/xmw_already.model'; // xmw_already 实体
+import { XmwAnnouncement } from '../../../models/xmw_announcement.model'; // xmw_announcement 实体
+import { XmwUser } from '../../../models/xmw_user.model'; // xmw_user 实体
+import { responseMessage } from '../../../utils'; // 全局工具函数
+import { ANNOUNCEMENT_TYPE } from '../../../utils/enums';
+import type { Flag, PageResponse, Response, SessionTypes } from '../../../utils/types';
 
 import {
   ListAnnouncementDto,

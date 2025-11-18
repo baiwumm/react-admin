@@ -3,12 +3,12 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-19 17:14:38
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 17:12:42
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:41:58
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import type { OrgTypes, Status } from '@/utils/types';
+import type { OrgTypes, Status } from '../../../../utils/types';
 
 /**
  * @description: 保存组织数据 Dto

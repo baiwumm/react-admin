@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-15 22:35:00
- * @LastEditors: Cyan
- * @LastEditTime: 2022-11-30 10:51:14
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:37:16
  */
 import {
   BelongsTo,
@@ -18,8 +18,8 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import type { InternationalAttributes } from '@/utils/types/system';
+import { XmwUser } from '../models/xmw_user.model'; // xmw_user 实体
+import type { InternationalAttributes } from '../utils/types/system';
 
 @Table({ tableName: 'xmw_international', underscored: false })
 export class XmwInternational

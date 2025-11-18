@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2023-08-25 16:18:17
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-10-17 13:56:50
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:39:03
  */
 import {
   Body,
@@ -32,10 +32,10 @@ import { EventEmitter } from 'events';
 import { get } from 'lodash';
 import { Observable } from 'rxjs';
 
-import { DeleteResponseDto, UpdateResponseDto } from '@/dto/response.dto'; // 响应体 Dto
-import { LoggerInterceptor } from '@/interceptor/logger.interceptor';
-import type { SessionTypes } from '@/utils/types';
-import { AnnouncementAttributes } from '@/utils/types/administrative';
+import { DeleteResponseDto, UpdateResponseDto } from '../../../dto/response.dto'; // 响应体 Dto
+import { LoggerInterceptor } from '../../../interceptor/logger.interceptor';
+import type { SessionTypes } from '../../../utils/types';
+import { AnnouncementAttributes } from '../../../utils/types/administrative';
 
 import { AnnouncementService } from './announcement.service'; // Announcement Service
 import {

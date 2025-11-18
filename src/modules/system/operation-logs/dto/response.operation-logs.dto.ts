@@ -3,14 +3,14 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2023-03-17 16:09:30
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 16:49:32
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:47:14
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import { ResponseDto } from '@/dto/response.dto';
-import { XmwLogs } from '@/models/xmw_logs.model'; // Xmw_logs 实体
-import type { PageResponse } from '@/utils/types';
+import { ResponseDto } from '../../../../dto/response.dto';
+import { XmwLogs } from '../../../../models/xmw_logs.model'; // Xmw_logs 实体
+import type { PageResponse } from '../../../../utils/types';
 
 export class ResponseOperationLogsDto extends ResponseDto {
   @ApiProperty({

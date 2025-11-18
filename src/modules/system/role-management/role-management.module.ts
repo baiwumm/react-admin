@@ -4,13 +4,13 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-19 11:19:47
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-24 10:58:42
+ * @LastEditTime: 2025-11-18 16:47:31
  */
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { OperationLogsModule } from '@/modules/system/operation-logs/operation-logs.module'; // 系统设置-操作日志
-import { XmwPermission } from '@/models/xmw_permission.model'; // xmw_permission 实体
-import { XmwRole } from '@/models/xmw_role.model'; // xmw_role 实体
+import { OperationLogsModule } from '../../../modules/system/operation-logs/operation-logs.module'; // 系统设置-操作日志
+import { XmwPermission } from '../../../models/xmw_permission.model'; // xmw_permission 实体
+import { XmwRole } from '../../../models/xmw_role.model'; // xmw_role 实体
 
 import { RoleManagementController } from './role-management.controller'; // RoleManagement Controller
 import { RoleManagementService } from './role-management.service'; // RoleManagement Service

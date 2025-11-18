@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-16 22:07:40
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:21:58
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:50:02
  */
 import {
   ArgumentMetadata,
@@ -15,7 +15,7 @@ import {
 import { plainToClass } from 'class-transformer';
 import { validate } from 'class-validator';
 
-import { Logger } from '@/utils/log4js';
+import { Logger } from '../utils/log4js';
 
 @Injectable()
 export class ValidationPipe implements PipeTransform {

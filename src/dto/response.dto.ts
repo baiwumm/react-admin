@@ -3,12 +3,12 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-19 17:23:03
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:20:12
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:35:08
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import type { PageResponse } from '@/utils/types';
+import type { PageResponse } from '../utils/types';
 
 /**
  * @description: 统一响应体 Dto

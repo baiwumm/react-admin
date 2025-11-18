@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-16 22:04:12
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:23:36
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:36:26
  */
 import {
   CallHandler,
@@ -15,7 +15,7 @@ import {
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Logger } from '@/utils/log4js';
+import { Logger } from '../utils/log4js';
 
 @Injectable()
 export class TransformInterceptor implements NestInterceptor {

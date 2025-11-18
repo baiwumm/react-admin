@@ -4,14 +4,14 @@
  * @Author: 白雾茫茫丶
  * @Date: 2023-08-25 16:17:52
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-24 14:05:16
+ * @LastEditTime: 2025-11-18 16:39:20
  */
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 
-import { XmwAlready } from '@/models/xmw_already.model'; // xmw_already 实体
-import { XmwAnnouncement } from '@/models/xmw_announcement.model'; // xmw_announcement 实体
-import { OperationLogsModule } from '@/modules/system/operation-logs/operation-logs.module';
+import { XmwAlready } from '../../../models/xmw_already.model'; // xmw_already 实体
+import { XmwAnnouncement } from '../../../models/xmw_announcement.model'; // xmw_announcement 实体
+import { OperationLogsModule } from '../../../modules/system/operation-logs/operation-logs.module';
 
 import { AnnouncementController } from './announcement.controller'; // Announcement Controller
 import { AnnouncementService } from './announcement.service'; // Announcement Service

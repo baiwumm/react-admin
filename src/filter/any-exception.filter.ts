@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-16 21:16:30
- * @LastEditors: Cyan
- * @LastEditTime: 2022-11-28 09:20:31
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:35:21
  */
 import {
   ArgumentsHost,
@@ -14,7 +14,7 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 
-import { responseMessage } from '@/utils';
+import { responseMessage } from '../utils';
 
 import { Logger } from '../utils/log4js'; // 打印日志
 

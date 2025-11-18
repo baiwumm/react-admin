@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-17 17:49:53
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2025-11-18 16:27:53
+ * @LastEditTime: 2025-11-18 16:43:23
  */
 import {
   Controller,
@@ -28,9 +28,9 @@ import moment from 'moment'; // 时间插件 moment
 import { diskStorage } from 'multer';
 import { normalize } from 'path';
 
-import App_configuration from '@/config/configuration'; // 全局配置
-import { responseMessage } from '@/utils';
-import type { Response } from '@/utils/types';
+import App_configuration from '../../config/configuration'; // 全局配置
+import { responseMessage } from '../../utils';
+import type { Response } from '../../utils/types';
 
 import { UploadFileDto } from './dto';
 

@@ -3,18 +3,18 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-19 11:19:47
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-10-12 09:15:52
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:40:36
  */
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { Op } from 'sequelize';
 import type { WhereOptions } from 'sequelize/types';
 
-import { XmwJobs } from '@/models/xmw_jobs.model'; // xmw_jobs 实体
-import { XmwOrganization } from '@/models/xmw_organization.model';
-import { initializeTree, responseMessage } from '@/utils'; // 全局工具函数
-import type { Response, SessionTypes } from '@/utils/types';
+import { XmwJobs } from '../../../models/xmw_jobs.model'; // xmw_jobs 实体
+import { XmwOrganization } from '../../../models/xmw_organization.model';
+import { initializeTree, responseMessage } from '../../../utils'; // 全局工具函数
+import type { Response, SessionTypes } from '../../../utils/types';
 
 import { ListJobsManagementDto, SaveJobsManagementDto } from './dto';
 

@@ -11,10 +11,10 @@ import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 import { SequelizeModule } from '@nestjs/sequelize';
 
-import App_configuration from '@/config/configuration'; // 全局配置
-import { XmwMenu } from '@/models/xmw_menu.model'; // xmw_menu 实体
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import { OperationLogsModule } from '@/modules/system/operation-logs/operation-logs.module';
+import App_configuration from '../../config/configuration'; // 全局配置
+import { XmwMenu } from '../../models/xmw_menu.model'; // xmw_menu 实体
+import { XmwUser } from '../../models/xmw_user.model'; // xmw_user 实体
+import { OperationLogsModule } from '../../modules/system/operation-logs/operation-logs.module';
 
 import { AuthController } from './auth.controller'; // Auth Controller
 import { AuthService } from './auth.service'; // Auth Service

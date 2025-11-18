@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-28 16:33:09
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 17:25:09
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:38:31
  */
 import {
   Column,
@@ -20,9 +20,9 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import { XmwPermission } from '@/models/xmw_permission.model';
-import type { Status } from '@/utils/types';
-import type { RoleAttributes } from '@/utils/types/system';
+import { XmwPermission } from '../models/xmw_permission.model';
+import type { Status } from '../utils/types';
+import type { RoleAttributes } from '../utils/types/system';
 @Table({ tableName: 'xmw_role' })
 export class XmwRole
   extends Model<RoleAttributes, RoleAttributes>

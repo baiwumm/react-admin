@@ -9,8 +9,8 @@
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import { OperationLogsModule } from '@/modules/system/operation-logs/operation-logs.module'; // 系统设置-操作日志
+import { XmwUser } from '../../../models/xmw_user.model'; // xmw_user 实体
+import { OperationLogsModule } from '../../../modules/system/operation-logs/operation-logs.module'; // 系统设置-操作日志
 import { UserManagementController } from './user-management.controller'; // UserManagement Controller
 import { UserManagementService } from './user-management.service'; // UserManagement Service
 

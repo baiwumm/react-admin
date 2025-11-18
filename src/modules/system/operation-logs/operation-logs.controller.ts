@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-12-12 10:10:55
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-25 15:32:48
+ * @LastEditTime: 2025-11-18 16:45:53
  */
 import {
   Body,
@@ -17,7 +17,7 @@ import {
 import { AuthGuard } from '@nestjs/passport';
 import { ApiOkResponse, ApiOperation } from '@nestjs/swagger'; // swagger 接口文档
 
-import { DeleteResponseDto } from '@/dto/response.dto'; // 响应体 Dto
+import { DeleteResponseDto } from '../../../dto/response.dto'; // 响应体 Dto
 
 import {
   DelLogsDto,

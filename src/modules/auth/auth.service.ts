@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-25 14:29:53
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2025-07-28 11:47:58
+ * @LastEditTime: 2025-11-18 16:42:37
  */
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
@@ -13,14 +13,14 @@ import { Op } from 'sequelize';
 import type { WhereOptions } from 'sequelize/types';
 import { Sequelize } from 'sequelize-typescript';
 
-import { XmwInternational } from '@/models/xmw_international.model'; // xmw_international 实体
-import { XmwJobs } from '@/models/xmw_jobs.model'; // xmw_jobs 实体
-import { XmwMenu } from '@/models/xmw_menu.model'; // xmw_menu 实体
-import { XmwOrganization } from '@/models/xmw_organization.model'; // xmw_organization 实体
-import { XmwRole } from '@/models/xmw_role.model'; // xmw_role 实体
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import { initializeTree, responseMessage } from '@/utils';
-import type { Response, SessionTypes } from '@/utils/types';
+import { XmwInternational } from '../../models/xmw_international.model'; // xmw_international 实体
+import { XmwJobs } from '../../models/xmw_jobs.model'; // xmw_jobs 实体
+import { XmwMenu } from '../../models/xmw_menu.model'; // xmw_menu 实体
+import { XmwOrganization } from '../../models/xmw_organization.model'; // xmw_organization 实体
+import { XmwRole } from '../../models/xmw_role.model'; // xmw_role 实体
+import { XmwUser } from '../../models/xmw_user.model'; // xmw_user 实体
+import { initializeTree, responseMessage } from '../../utils';
+import type { Response, SessionTypes } from '../../utils/types';
 
 import { LoginParamsDto } from './dto';
 

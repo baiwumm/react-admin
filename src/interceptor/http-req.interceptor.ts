@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-14 09:58:57
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 15:23:17
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:35:56
  */
 import {
   CallHandler,
@@ -15,13 +15,12 @@ import {
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { responseMessage } from '@/utils'; // 全局工具函数
-import type { Response } from '@/utils/types';
+import { responseMessage } from '../utils'; // 全局工具函数
+import type { Response } from '../utils/types';
 
 @Injectable()
 export class HttpReqTransformInterceptor<T>
-  implements NestInterceptor<T, Response>
-{
+  implements NestInterceptor<T, Response> {
   intercept(
     context: ExecutionContext,
     next: CallHandler,

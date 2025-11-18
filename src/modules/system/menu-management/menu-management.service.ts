@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-27 10:37:42
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-09-28 16:37:29
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:45:04
  */
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
@@ -12,11 +12,11 @@ import { Op } from 'sequelize';
 import type { WhereOptions } from 'sequelize/types';
 import { Sequelize } from 'sequelize-typescript';
 
-import { XmwInternational } from '@/models/xmw_international.model'; // xmw_international 实体
-import { XmwMenu } from '@/models/xmw_menu.model'; // xmw_menu 实体
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import { initializeTree, responseMessage } from '@/utils'; // 全局工具函数
-import type { Response, SessionTypes } from '@/utils/types';
+import { XmwInternational } from '../../../models/xmw_international.model'; // xmw_international 实体
+import { XmwMenu } from '../../../models/xmw_menu.model'; // xmw_menu 实体
+import { XmwUser } from '../../../models/xmw_user.model'; // xmw_user 实体
+import { initializeTree, responseMessage } from '../../../utils'; // 全局工具函数
+import type { Response, SessionTypes } from '../../../utils/types';
 
 import { ListMenuManagementDto, SaveMenuManagementDto } from './dto';
 

@@ -4,11 +4,11 @@
  * @Author: 白雾茫茫丶
  * @Date: 2023-03-17 15:50:23
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-25 15:17:44
+ * @LastEditTime: 2025-11-18 16:47:05
  */
 import { ApiProperty } from '@nestjs/swagger';
 
-import type { RequestMethods } from '@/utils/types';
+import type { RequestMethods } from '../../../../utils/types';
 
 export class ListOperationLogsDto {
   @ApiProperty({

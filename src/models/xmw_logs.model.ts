@@ -10,9 +10,9 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import type { RequestMethods } from '@/utils/types';
-import type { LogsAttributes } from '@/utils/types/system';
+import { XmwUser } from '../models/xmw_user.model'; // xmw_user 实体
+import type { RequestMethods } from '../utils/types';
+import type { LogsAttributes } from '../utils/types/system';
 
 @Table({ tableName: 'xmw_logs' })
 export class XmwLogs

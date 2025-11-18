@@ -3,17 +3,17 @@
  * @Version: 2.0
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-20 16:42:35
- * @LastEditors: 白雾茫茫丶
- * @LastEditTime: 2023-10-12 09:09:01
+ * @LastEditors: 白雾茫茫丶<baiwumm.com>
+ * @LastEditTime: 2025-11-18 16:41:16
  */
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { Op } from 'sequelize';
 import type { WhereOptions } from 'sequelize/types';
 
-import { XmwOrganization } from '@/models/xmw_organization.model'; // xmw_organization 实体
-import { initializeTree, responseMessage } from '@/utils'; // 全局工具函数
-import type { Response, SessionTypes } from '@/utils/types';
+import { XmwOrganization } from '../../../models/xmw_organization.model'; // xmw_organization 实体
+import { initializeTree, responseMessage } from '../../../utils'; // 全局工具函数
+import type { Response, SessionTypes } from '../../../utils/types';
 
 import { ListOrganizationDto, SaveOrganizationDto } from './dto';
 

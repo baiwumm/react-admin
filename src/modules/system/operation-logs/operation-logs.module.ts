@@ -2,8 +2,8 @@ import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 
-import { XmwLogs } from '@/models/xmw_logs.model'; // Xmw_logs 实体
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
+import { XmwLogs } from '../../../models/xmw_logs.model'; // Xmw_logs 实体
+import { XmwUser } from '../../../models/xmw_user.model'; // xmw_user 实体
 
 import { OperationLogsController } from './operation-logs.controller'; // OperationLogs Controller
 import { OperationLogsService } from './operation-logs.service'; // OperationLogs Service

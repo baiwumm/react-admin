@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-15 22:06:24
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-24 11:06:15
+ * @LastEditTime: 2025-11-18 16:44:22
  */
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
@@ -13,11 +13,11 @@ import { Op } from 'sequelize';
 import type { WhereOptions } from 'sequelize/types';
 import { Sequelize } from 'sequelize-typescript';
 
-import { XmwInternational } from '@/models/xmw_international.model'; // xmw_international 实体
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import { initializeLang, initializeTree, responseMessage } from '@/utils'; // 全局工具函数
-import { LANGS } from '@/utils/enums';
-import type { Langs, Response, SessionTypes } from '@/utils/types';
+import { XmwInternational } from '../../../models/xmw_international.model'; // xmw_international 实体
+import { XmwUser } from '../../../models/xmw_user.model'; // xmw_user 实体
+import { initializeLang, initializeTree, responseMessage } from '../../../utils'; // 全局工具函数
+import { LANGS } from '../../../utils/enums';
+import type { Langs, Response, SessionTypes } from '../../../utils/types';
 
 import { ListInternationalDto, SaveInternationalDto } from './dto';
 @Injectable()

@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-10-12 17:06:37
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2025-11-18 16:25:09
+ * @LastEditTime: 2025-11-18 16:34:50
  */
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'; // swagger 接口文档
@@ -12,11 +12,11 @@ import express from 'express';
 import session from 'express-session';
 import { join } from 'path';
 
-import { HttpReqTransformInterceptor } from '@/interceptor/http-req.interceptor'; // 全局响应拦截器
-import { requestMiddleware } from '@/middleware/request.middleware'; // 全局请求拦截中间件
-import { ValidationPipe } from '@/pipe/validation.pipe'; // 参数校验
-import { Logger } from '@/utils/log4js';
-import type { Response } from '@/utils/types';
+import { HttpReqTransformInterceptor } from './interceptor/http-req.interceptor'; // 全局响应拦截器
+import { requestMiddleware } from './middleware/request.middleware'; // 全局请求拦截中间件
+import { ValidationPipe } from './pipe/validation.pipe'; // 参数校验
+import { Logger } from './utils/log4js';
+import type { Response } from './utils/types';
 
 import { AppModule } from './app.module';
 import App_configuration from './config/configuration'; // 全局配置

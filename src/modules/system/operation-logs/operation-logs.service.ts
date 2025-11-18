@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-12-12 10:11:05
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-28 10:09:28
+ * @LastEditTime: 2025-11-18 16:46:55
  */
 import { HttpService } from '@nestjs/axios';
 import { Inject, Injectable, Scope } from '@nestjs/common';
@@ -17,11 +17,11 @@ import { Op } from 'sequelize';
 import type { WhereOptions } from 'sequelize/types';
 import * as UAParser from 'ua-parser-js';
 
-import { XmwLogs } from '@/models/xmw_logs.model'; // Xmw_logs 实体
-import { XmwUser } from '@/models/xmw_user.model'; // xmw_user 实体
-import { getRealIp, responseMessage } from '@/utils'; // 全局工具函数
-import type { PageResponse, Response, SessionTypes } from '@/utils/types';
-import type { LogsAttributes } from '@/utils/types/system';
+import { XmwLogs } from '../../../models/xmw_logs.model'; // Xmw_logs 实体
+import { XmwUser } from '../../../models/xmw_user.model'; // xmw_user 实体
+import { getRealIp, responseMessage } from '../../../utils'; // 全局工具函数
+import type { PageResponse, Response, SessionTypes } from '../../../utils/types';
+import type { LogsAttributes } from '../../../utils/types/system';
 
 import { ListOperationLogsDto } from './dto';
 @Injectable({ scope: Scope.REQUEST })
