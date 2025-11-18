@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2023-10-23 13:47:16
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-07-19 09:19:00
+ * @LastEditTime: 2025-11-18 17:35:21
  */
 import { Icon, KeepAliveContext, useIntl } from '@umijs/max';
 import { FloatButton } from 'antd';
@@ -40,7 +40,7 @@ const ActionButtons: FC = () => {
       {/* Umami 统计分析 */}
       <FloatButton
         icon={<Icon icon="ri:bar-chart-2-line" />}
-        onClick={() => window.open('https://umami.baiwumm.com/share/7g4VXXHqQV3qsSB3')}
+        onClick={() => window.open('https://um.baiwumm.com/share/D526Yv6vaUpMI1Sa')}
         tooltip={formatMessage({
           id: `${INTERNATION.BASICLAYOUT}.ActionButtons.website-statistics`,
         })}

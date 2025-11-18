@@ -58,6 +58,7 @@
     "@js-preview/docx": "^1.6.2",
     "@js-preview/excel": "^1.7.12",
     "@js-preview/pdf": "^2.0.6",
+    "@vercel/analytics": "^1.5.0",
     "@xyflow/react": "^12.3.2",
     "ahooks": "^3.7.8",
     "antd": "^5.21.3",

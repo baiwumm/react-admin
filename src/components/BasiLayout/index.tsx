@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-09-19 20:39:53
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2024-10-21 17:45:47
+ * @LastEditTime: 2025-11-18 17:36:44
  */
 import {
   ProConfigProvider,
@@ -23,7 +23,7 @@ import {
 import { useBoolean } from 'ahooks';
 import { Space, Typography } from 'antd';
 import { eq, toString } from 'lodash-es';
-
+import { Analytics } from '@vercel/analytics/react';
 import Footer from '@/components/Footer'; // 全局底部版权组件
 import { formatPerfix, getLocalStorageItem, setLocalStorageItem } from '@/utils';
 import { MenuRemixIconMap } from '@/utils/const';
@@ -148,6 +148,8 @@ export const BasiLayout: RunTimeLayoutConfig = ({
     childrenRender: (children) => {
       return (
         <>
+          {/* Vercel 统计 */}
+          <Analytics />
           <ProConfigProvider>
             {children}
             {/* 锁屏弹窗 */}
