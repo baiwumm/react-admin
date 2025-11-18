@@ -1,0 +1,17 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://react-admin-8wwd.onrender.com/:path*"
+    },
+    {
+      "source": "/docs/:path*",
+      "destination": "https://react-admin-8wwd.onrender.com/docs/:path*"
+    },
+    {
+      "source": "/static/:path*",
+      "destination": "https://react-admin-8wwd.onrender.com/static/:path*"
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
