@@ -36,7 +36,8 @@ export class ValidationPipe implements PipeTransform {
     return value;
   }
   private toValidate(metatype: any): boolean {
-    const types: any[] = [String, Boolean, Number, Array, Object];
-    return !types.includes(metatype);
+    // const types: any[] = [String, Boolean, Number, Array, Object];
+    // return !types.includes(metatype);
+    return false; // 全局关闭校验（不推荐）
   }
 }
