@@ -13,5 +13,6 @@
       "destination": "https://react-admin-8wwd.onrender.com/static/:path*"
     },
     { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  ],
+  "outputDirectory": "dist"
 }
