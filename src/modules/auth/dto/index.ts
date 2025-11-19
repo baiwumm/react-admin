@@ -4,10 +4,10 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-11-25 10:34:23
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2025-11-18 16:42:56
+ * @LastEditTime: 2025-11-19 09:56:01
  */
 import { ApiProperty } from '@nestjs/swagger';
-
+import { IsOptional, IsString, IsIn } from 'class-validator';
 import { ResponseDto } from '../../../dto/response.dto';
 import { XmwMenu } from '../../../models/xmw_menu.model'; // xmw_menu 实体
 import { XmwUser } from '../../../models/xmw_user.model'; // xmw_user 实体
@@ -22,6 +22,8 @@ export class LoginParamsDto {
     description: '登录类型',
     default: 'account',
   })
+  @IsIn(['account', 'mobile'], { message: '登录类型必须是 account 或 mobile' })
+  @IsString()
   type: string;
 
   @ApiProperty({
@@ -30,6 +32,8 @@ export class LoginParamsDto {
     default: 'admin',
     required: false,
   })
+  @IsOptional()
+  @IsString()
   user_name?: string;
 
   @ApiProperty({
@@ -38,6 +42,8 @@ export class LoginParamsDto {
     default: '+eUwGEfC9+bY+NgU22Ol4g==',
     required: false,
   })
+  @IsOptional()
+  @IsString()
   password?: string;
 
   @ApiProperty({
@@ -46,6 +52,8 @@ export class LoginParamsDto {
     default: '13800138000',
     required: false,
   })
+  @IsOptional()
+  @IsString()
   phone?: string;
 
   @ApiProperty({
@@ -54,6 +62,8 @@ export class LoginParamsDto {
     default: 'v4au',
     required: false,
   })
+  @IsOptional()
+  @IsString()
   verifyCode?: string;
 }
 
