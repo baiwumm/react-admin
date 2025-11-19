@@ -4,7 +4,7 @@
  * @Author: 白雾茫茫丶
  * @Date: 2022-09-19 20:39:53
  * @LastEditors: 白雾茫茫丶<baiwumm.com>
- * @LastEditTime: 2025-11-18 17:36:44
+ * @LastEditTime: 2025-11-19 09:20:55
  */
 import {
   ProConfigProvider,
@@ -29,7 +29,7 @@ import { formatPerfix, getLocalStorageItem, setLocalStorageItem } from '@/utils'
 import { MenuRemixIconMap } from '@/utils/const';
 import { LOCAL_STORAGE, ROUTES } from '@/utils/enums';
 import type { InitialStateTypes } from '@/utils/types';
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import {
   ActionButtons,
   actionsRender,
@@ -150,6 +150,8 @@ export const BasiLayout: RunTimeLayoutConfig = ({
         <>
           {/* Vercel 统计 */}
           <Analytics />
+          {/* Speed Insights */}
+          <SpeedInsights />
           <ProConfigProvider>
             {children}
             {/* 锁屏弹窗 */}
