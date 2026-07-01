@@ -150,9 +150,7 @@ export default defineConfig({
   */
   headScripts: [
     // 解决首次加载时白屏的问题
-    { src: '/scripts/loading.js', async: true },
-    // Umimai 统计
-    { src: 'https://um.baiwumm.com/script.js', 'data-website-id': '21b8efb0-a41d-4495-9668-1202a6917838' },
+    { src: '/scripts/loading.js', async: true }
   ],
   // 站点统计
   analytics: {
